@@ -101,7 +101,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: url('monyenyo.jpg') center/cover no-repeat;
+    background: url('../images/deskrop1.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;

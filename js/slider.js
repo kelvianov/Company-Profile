@@ -22,6 +22,19 @@ const slides = [
     }
 ];
 
+// Preload remaining images after initial load
+function preloadImages() {
+    slides.forEach((slide, index) => {
+        if (index > 0) { // Skip first image as it's already preloaded in HTML
+            const img = new Image();
+            img.src = `images/${slide.image}`;
+        }
+    });
+}
+
+// Preload images after a short delay
+setTimeout(preloadImages, 1000);
+
 function showSlide(index) {
     // Add fade out effect for text
     subtitle.style.opacity = '0';
