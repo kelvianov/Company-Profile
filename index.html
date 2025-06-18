@@ -13,10 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <!-- Header -->
+<body>    <!-- Header -->
     <header class="header">
         <div class="container">
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <!-- Social Media Icons -->
             <div class="social-icons">
                 <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -48,6 +54,36 @@
             <div class="phone-number">
                 <i class="fas fa-phone" style="color: #FFD700;"></i>
                 <span>+62 8128 008 0275</span>
+            </div>
+        </div>        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <span class="mobile-logo">Monyenyo</span>
+                    <button class="close-menu" id="closeMenu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="#home" class="mobile-nav-link">HOME</a>
+                    <a href="#about" class="mobile-nav-link">ABOUT</a>
+                    <a href="#menu" class="mobile-nav-link">MENU</a>
+                    <a href="#blogs" class="mobile-nav-link">BLOGS</a>
+                    <a href="#outlets" class="mobile-nav-link">OUTLETS</a>
+                    <a href="#contact" class="mobile-nav-link">CONTACT</a>
+                </nav>
+                <div class="mobile-contact">
+                    <a href="tel:+6281280080275">
+                        <i class="fas fa-phone"></i>
+                        +62 8128 008 0275
+                    </a>
+                </div>
+                <div class="mobile-social">
+                    <span class="mobile-social-title">Follow Us</span>
+                    <div class="mobile-social-links">
+                        <a href="#" class="mobile-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="mobile-social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="mobile-social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
