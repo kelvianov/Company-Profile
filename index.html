@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monyenyo - Indonesia's Best Brownies Pastry</title>    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧁</text></svg>" type="image/svg+xml">
-      <!-- AGGRESSIVE PRELOADING FOR ULTRA-FAST LOADING -->
-    <link rel="preload" href="images/deskrop1.jpg" as="image" importance="high" fetchpriority="high">
-    <link rel="preload" href="images/desktop2.jpg" as="image" importance="high">
-    <link rel="preload" href="images/desktop3.jpg" as="image" importance="high">
     
-    <!-- Critical CSS preload -->
-    <link rel="preload" href="css/main.css" as="style">
+    <!-- Preload all hero images for better mobile performance -->
+    <link rel="preload" href="images/deskrop1.jpg" as="image">
+    <link rel="preload" href="images/desktop2.jpg" as="image">
+    <link rel="preload" href="images/desktop3.jpg" as="image">
     
-    <!-- DNS prefetch and preconnect for external resources -->
+    <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">

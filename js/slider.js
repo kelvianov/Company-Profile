@@ -5,8 +5,6 @@ const title = document.querySelector('.hero-title');
 const dots = document.querySelectorAll('.dot');
 let imagesLoaded = false;
 let slideInterval;
-let imageCache = {}; // Cache loaded images for instant access
-let isAnimating = false;
 
 const slides = [
     {
@@ -26,111 +24,86 @@ const slides = [
     }
 ];
 
-// ULTRA-FAST AGGRESSIVE PRELOADING
-function aggressivePreload() {
-    const startTime = performance.now();
+// Enhanced image preloading with error handling
+function preloadImages() {
     let loadedCount = 0;
     const totalImages = slides.length;
-    
-    console.log('🚀 Starting aggressive image preloading...');
     
     slides.forEach((slide, index) => {
         const img = new Image();
         
-        // Maximum priority settings
-        img.crossOrigin = 'anonymous';
-        img.decoding = 'async';
-        img.loading = 'eager';
-        img.fetchPriority = index === 0 ? 'high' : 'auto';
-        
         img.onload = function() {
-            // Store in cache for instant access
-            imageCache[slide.image] = this.src;
             loadedCount++;
-            
-            const loadTime = performance.now() - startTime;
-            console.log(`✅ Image ${index + 1}/${totalImages} loaded in ${loadTime.toFixed(2)}ms: ${slide.image}`);
-            
             if (loadedCount === totalImages) {
                 imagesLoaded = true;
-                const totalTime = performance.now() - startTime;
-                console.log(`🎯 ALL IMAGES LOADED in ${totalTime.toFixed(2)}ms - READY FOR ULTRA-SMOOTH ANIMATION!`);
-                
-                // Initialize first slide immediately
-                requestAnimationFrame(() => showSlide(0));
+                console.log('All images loaded successfully');
             }
         };
         
         img.onerror = function() {
-            console.error(`❌ Failed to load image: ${slide.image}`);
-            // Create fallback but still continue
-            imageCache[slide.image] = `images/${slide.image}`;
-            loadedCount++;
-            
+            console.error(`Failed to load image: ${slide.image}`);
+            loadedCount++; // Still count as "processed"
             if (loadedCount === totalImages) {
                 imagesLoaded = true;
-                console.log('⚠️ All images processed (some with fallbacks) - Ready!');
-                requestAnimationFrame(() => showSlide(0));
             }
         };
-          img.src = `images/${slide.image}`;
+        
+        img.src = `images/${slide.image}`;
     });
 }
 
-// ULTRA-FAST SLIDE TRANSITION FUNCTION - KEEP ORIGINAL TIMING
+// Start preloading immediately
+preloadImages();
+
 function showSlide(index) {
-    // Prevent overlapping animations
-    if (isAnimating) return;
-    
     // Safety check
     if (!slides[index]) return;
     
-    isAnimating = true;
-    
-    // Get cached image URL for fast loading
-    const imageUrl = imageCache[slides[index].image] || `images/${slides[index].image}`;
-    
-    // KEEP ORIGINAL ANIMATION TIMING - ONLY OPTIMIZE LOADING
+    // Add fade out effect for text
     subtitle.style.opacity = '0';
     title.style.opacity = '0';
     
     setTimeout(() => {
-        // Use cached image for instant loading
-        hero.style.backgroundImage = `url('${imageUrl}')`;
+        // Update background image with fallback
+        const imageUrl = `images/${slides[index].image}`;
         
-        // Update slide classes
+        // Check if image exists before setting
+        const testImg = new Image();
+        testImg.onload = function() {
+            hero.style.backgroundImage = `url('${imageUrl}')`;
+        };
+        testImg.onerror = function() {
+            console.error(`Failed to load slide image: ${imageUrl}`);
+            // Keep previous image if new one fails
+        };
+        testImg.src = imageUrl;
+        
+        // Remove previous slide classes
         hero.className = 'hero';
-        if (index === 0) hero.classList.add('slide-1');
-        else if (index === 1) hero.classList.add('slide-2');
-        else if (index === 2) hero.classList.add('slide-3');
+        
+        // Add slide-specific class
+        if (index === 0) {
+            hero.classList.add('slide-1');
+        } else if (index === 1) {
+            hero.classList.add('slide-2');
+        } else if (index === 2) {
+            hero.classList.add('slide-3');
+        }
         
         // Update text content
         subtitle.textContent = slides[index].subtitle;
         title.innerHTML = slides[index].title;
         
-        // KEEP ORIGINAL FADE-IN TIMING
+        // Fade text back in with delay for smoother effect
         setTimeout(() => {
             subtitle.style.opacity = '1';
             title.style.opacity = '1';
-            
-            // Update dots
-            updateDots(index);
-            
-            // Animation complete
-            isAnimating = false;
-            
-            console.log(`⚡ Slide ${index + 1} loaded with cached image - smooth original animation`);
-        }, 300);
-    }, 300);
-}
-
-function updateDots(activeIndex) {
-    dots.forEach((dot, index) => {
-        dot.classList.remove('active');
-        if (index === activeIndex) {
-            dot.classList.add('active');
-        }
-    });
+        }, 100);
+    }, 400);
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
 }
 
 function nextSlide() {
@@ -138,31 +111,19 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-// INSTANT AUTO-SLIDE (faster interval for responsive feel)
+// Auto slide every 4 seconds
 setInterval(nextSlide, 4000);
 
-// OPTIMIZED DOT NAVIGATION - No delays, instant transitions
+// Manual dot navigation
 dots.forEach((dot, index) => {
-    dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (!isAnimating) {
-            currentSlide = index;
-            showSlide(currentSlide);
-        }
-    });
-    
-    // Also support touch events for mobile
-    dot.addEventListener('touchend', (e) => {
-        e.preventDefault();
-        if (!isAnimating) {
-            currentSlide = index;
-            showSlide(currentSlide);
-        }
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
     });
 });
 
-// START AGGRESSIVE PRELOADING IMMEDIATELY
-aggressivePreload();
+// Initialize first slide
+showSlide(0);
 
 // Hamburger Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {

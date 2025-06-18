@@ -98,7 +98,7 @@ body {
     margin-right: -99px;
 }
 
-/* Hero Section - LOADING OPTIMIZED, ANIMATION UNCHANGED */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     background: url('../images/deskrop1.jpg') center/cover no-repeat;
@@ -106,23 +106,12 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    /* KEEP ORIGINAL ANIMATION SPEED */
     transition: background-image 0.8s ease-in-out;
-    /* ONLY ADD LOADING OPTIMIZATIONS */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    will-change: background-image;
 }
 
 .hero-content {
     padding-top: 100px;
     z-index: 2;
-    /* PERFORMANCE BOOST */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: auto;
 }
 
 .hero-subtitle {
@@ -133,12 +122,7 @@ body {
     opacity: 0.95;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     margin-left: -480px;
-    /* KEEP ORIGINAL ANIMATION TIMING */
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    /* ONLY ADD LOADING OPTIMIZATIONS */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: opacity;
 }
 
 .hero-title {
@@ -150,12 +134,7 @@ body {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     text-transform: uppercase;
     margin-left: -480px;
-    /* KEEP ORIGINAL ANIMATION TIMING */
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    /* ONLY ADD LOADING OPTIMIZATIONS */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: opacity;
 }
 
 
@@ -605,20 +584,10 @@ body {
     
     .nav-link {
         font-size: 12px;
-    }    /* Hero Mobile Positioning - LOADING OPTIMIZED ONLY */
+    }    /* Hero Mobile Positioning */
     .hero {
         align-items: flex-end;
         padding-bottom: 180px;
-        /* KEEP ORIGINAL ANIMATION SPEED */
-        transition: background-image 0.8s ease-in-out;
-        /* ONLY ADD LOADING OPTIMIZATIONS */
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        will-change: background-image;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
     }
     
     .hero-content {
@@ -626,31 +595,20 @@ body {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
-        /* MOBILE PERFORMANCE */
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
     }
     
     .hero-text {
         text-align: left;
         max-width: 100%;
-        /* SMOOTH TEXT RENDERING */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
     }
     
     .hero-subtitle {
         font-size: 16px;
-        margin-bottom: 15px;        margin-left: 0;
+        margin-bottom: 15px;
+        margin-left: 0;
         opacity: 0.9;
         font-weight: 400;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        /* KEEP ORIGINAL MOBILE ANIMATION TIMING */
-        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        /* ONLY ADD LOADING OPTIMIZATIONS */
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        will-change: opacity;
     }
     
     .hero-title {
@@ -660,12 +618,6 @@ body {
         letter-spacing: -2px;
         font-weight: 900;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-        /* KEEP ORIGINAL MOBILE ANIMATION TIMING */
-        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        /* ONLY ADD LOADING OPTIMIZATIONS */
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        will-change: opacity;
     }
     
     /* Remove slide-specific positioning on mobile */
@@ -840,79 +792,41 @@ body {
     }
 }
 
-/* LOADING OPTIMIZATIONS - ANIMATION TIMING UNCHANGED */
-
-/* Force hardware acceleration pada semua elemen hero - LOADING ONLY */
-.hero,
-.hero-content,
-.hero-text,
-.hero-title,
-.hero-subtitle,
-.pagination-dots,
-.dot {
-    /* ONLY LOADING PERFORMANCE - NO ANIMATION CHANGES */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    
-    /* PREVENT FLICKERING DURING LOADING */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    
-    /* OPTIMIZE LOADING RENDERING ONLY */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* CRITICAL LOADING OPTIMIZATION ONLY */
-.hero {
-    /* FORCE LAYER CREATION FOR FASTER LOADING */
-    will-change: background-image;
-    isolation: isolate;
-}
-
-/* PAGINATION DOTS - KEEP ORIGINAL ANIMATION */
-.pagination-dots {
-    transform: translateX(-50%) translateZ(0);
-    -webkit-transform: translateX(-50%) translateZ(0);
-}
-
-.dot {
-    /* KEEP ORIGINAL DOT ANIMATION - ONLY ADD LOADING OPTIMIZATION */
-    transition: background 0.3s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-/* MOBILE LOADING OPTIMIZATIONS - NO ANIMATION CHANGES */
+/* Mobile Image Loading Optimization */
 @media (max-width: 768px) {
-    /* LOADING PERFORMANCE ONLY */
-    body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
+    .hero {
+        /* Aggressive caching and optimization for mobile */
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        
+        /* Fallback colors for each slide */
+        background-color: #8B4513;
     }
-}
-
-/* PRELOAD OPTIMIZATION FOR FASTER LOADING */
-img[loading="eager"] {
-    content-visibility: auto;
-}
-
-/* LOADING LAYER CREATION - NO VISUAL CHANGES */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    will-change: transform;
-    transform: translateZ(0);
-    pointer-events: none;
-    z-index: 0;
+    
+    /* Loading state for mobile */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, #8B4513, #A0522D);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+    
+    /* Show loading background if image fails */
+    .hero.loading::before {
+        opacity: 0.8;
+    }
+    
+    /* Ensure hero content is above loading overlay */
+    .hero-content {
+        position: relative;
+        z-index: 10;
+    }
 }
