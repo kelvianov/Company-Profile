@@ -644,26 +644,41 @@ body {
     }
     
     .phone-number {
-        display: none;
-    }.footer-content {
+        display: none;    }.footer-content {
         flex-direction: column;
         gap: 20px;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-desc {
         max-width: 100%;
+        text-align: left;
     }
       .footer-contact {
-        align-items: center;
+        align-items: flex-start;
     }
     
     .footer-social {
-        align-items: center;
+        align-items: flex-start;
     }
     
     .social-links {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile Footer Specific - Left Alignment */
+@media (max-width: 768px) {
+    .footer-main .logo-section {
+        justify-content: flex-start;
+    }
+    
+    .footer-contact .contact-item {
+        justify-content: flex-start;
+    }
+    
+    .footer-bottom {
+        text-align: left;
     }
 }
 
@@ -760,18 +775,19 @@ body {
     .footer-content {
         flex-direction: column;
         gap: 20px;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-desc {
         max-width: 100%;
+        text-align: left;
     }
     
     .footer-contact {
-        align-items: center;
+        align-items: flex-start;
     }
     
     .footer-social {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
