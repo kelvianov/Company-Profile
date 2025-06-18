@@ -791,3 +791,42 @@ body {
         justify-content: flex-start;
     }
 }
+
+/* Mobile Image Loading Optimization */
+@media (max-width: 768px) {
+    .hero {
+        /* Aggressive caching and optimization for mobile */
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        
+        /* Fallback colors for each slide */
+        background-color: #8B4513;
+    }
+    
+    /* Loading state for mobile */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, #8B4513, #A0522D);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+    
+    /* Show loading background if image fails */
+    .hero.loading::before {
+        opacity: 0.8;
+    }
+    
+    /* Ensure hero content is above loading overlay */
+    .hero-content {
+        position: relative;
+        z-index: 10;
+    }
+}
