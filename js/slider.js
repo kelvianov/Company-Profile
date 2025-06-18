@@ -3,8 +3,6 @@ const hero = document.querySelector('.hero');
 const subtitle = document.querySelector('.hero-subtitle');
 const title = document.querySelector('.hero-title');
 const dots = document.querySelectorAll('.dot');
-let imagesLoaded = false;
-let slideInterval;
 
 const slides = [
     {
@@ -24,61 +22,27 @@ const slides = [
     }
 ];
 
-// Enhanced image preloading with error handling
+// Preload remaining images after initial load
 function preloadImages() {
-    let loadedCount = 0;
-    const totalImages = slides.length;
-    
     slides.forEach((slide, index) => {
-        const img = new Image();
-        
-        img.onload = function() {
-            loadedCount++;
-            if (loadedCount === totalImages) {
-                imagesLoaded = true;
-                console.log('All images loaded successfully');
-            }
-        };
-        
-        img.onerror = function() {
-            console.error(`Failed to load image: ${slide.image}`);
-            loadedCount++; // Still count as "processed"
-            if (loadedCount === totalImages) {
-                imagesLoaded = true;
-            }
-        };
-        
-        img.src = `images/${slide.image}`;
+        if (index > 0) { // Skip first image as it's already preloaded in HTML
+            const img = new Image();
+            img.src = `images/${slide.image}`;
+        }
     });
 }
 
-// Start preloading immediately
-preloadImages();
+// Preload images after a short delay
+setTimeout(preloadImages, 1000);
 
 function showSlide(index) {
-    // Safety check
-    if (!slides[index]) return;
-    
     // Add fade out effect for text
     subtitle.style.opacity = '0';
     title.style.opacity = '0';
     
     setTimeout(() => {
-        // Update background image with fallback
-        const imageUrl = `images/${slides[index].image}`;
-        
-        // Check if image exists before setting
-        const testImg = new Image();
-        testImg.onload = function() {
-            hero.style.backgroundImage = `url('${imageUrl}')`;
-        };
-        testImg.onerror = function() {
-            console.error(`Failed to load slide image: ${imageUrl}`);
-            // Keep previous image if new one fails
-        };
-        testImg.src = imageUrl;
-        
-        // Remove previous slide classes
+        // Update background image with smooth transition
+        hero.style.backgroundImage = `url('images/${slides[index].image}')`;        // Remove previous slide classes
         hero.className = 'hero';
         
         // Add slide-specific class
