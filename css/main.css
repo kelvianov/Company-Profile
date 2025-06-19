@@ -532,17 +532,32 @@ body {
     transform: translateY(-2px);
 }
 
-/* Make navbar transparent on mobile */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
+    /* Header positioning and hide functionality */
     .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
         background: transparent !important;
         backdrop-filter: none !important;
         border-bottom: none !important;
+        width: 100% !important;
     }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    
+    .header.hide-on-scroll {
+        transform: translateY(-100%) !important;
+        transition: transform 0.3s ease !important;
+        opacity: 0 !important;
+    }
+    
+    /* Keep title white in mobile */
+    .logo-text {
+        color: #ffffff !important;
+    }
+    
     .header .container {
         flex-wrap: wrap;
         gap: 20px;
