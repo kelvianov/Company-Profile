@@ -532,6 +532,15 @@ body {
     transform: translateY(-2px);
 }
 
+/* Make navbar transparent on mobile */
+@media (max-width: 768px) {
+    .header {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border-bottom: none !important;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header .container {
