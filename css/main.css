@@ -335,6 +335,7 @@ body {
     color: #888;
     margin: 0;
     font-size: 13px;
+    opacity: 0.8;
 }
 
 /* Hamburger Menu Button (Hidden on Desktop) */
