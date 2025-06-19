@@ -1,6 +1,59 @@
 /* SLIDER.JS - Unified JavaScript for Monyenyo Website */
 /* This file contains all JavaScript functionality in one place */
 
+// NAVBAR SCROLL FUNCTIONALITY
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+    
+    function updateNavbar() {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            // When scrolled down, add white background
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+            header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+            header.style.transition = 'all 0.3s ease';
+            
+            // Change text colors to dark
+            const socialLinks = header.querySelectorAll('.social-link');
+            const navLinks = header.querySelectorAll('.nav-link');
+            const logoText = header.querySelector('.logo-text');
+            const phoneNumber = header.querySelector('.phone-number');
+            
+            socialLinks.forEach(link => link.style.color = '#333333');
+            navLinks.forEach(link => link.style.color = '#333333');
+            if (logoText) logoText.style.color = '#333333';
+            if (phoneNumber) phoneNumber.style.color = '#333333';
+        } else {
+            // When at top, return to transparent
+            header.style.background = 'transparent';
+            header.style.backdropFilter = 'none';
+            header.style.borderBottom = 'none';
+            
+            // Change text colors back to white
+            const socialLinks = header.querySelectorAll('.social-link');
+            const navLinks = header.querySelectorAll('.nav-link');
+            const logoText = header.querySelector('.logo-text');
+            const phoneNumber = header.querySelector('.phone-number');
+            
+            socialLinks.forEach(link => link.style.color = 'white');
+            navLinks.forEach(link => link.style.color = 'white');
+            if (logoText) logoText.style.color = 'white';
+            if (phoneNumber) phoneNumber.style.color = 'white';
+        }
+        
+        lastScrollY = scrollY;
+    }
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', updateNavbar);
+    
+    // Initial check
+    updateNavbar();
+});
+
 // SLIDER CORE FUNCTIONALITY
 let currentSlide = 0;
 const hero = document.querySelector('.hero');

@@ -1,0 +1,510 @@
+/* ABOUT PAGE STYLES */
+/* Clean, modern, professional design following visual reference */
+
+/* Header Override for About Page */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .social-link {
+    color: #333333;
+}
+
+.header .nav-link {
+    color: #333333;
+}
+
+.header .nav-link.active {
+    color: #D4AF37;
+}
+
+.header .logo-text {
+    color: #333333;
+}
+
+.header .phone-number {
+    color: #333333;
+}
+
+.header .phone-number i {
+    color: #D4AF37 !important;
+}
+
+/* About Section for Both Pages (index.html and about.html) */
+.about-section, .about-hero {
+    min-height: 85vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 80px 0 60px 0;
+}
+
+/* Override for about section in index to be closer to hero */
+.about-section {
+    padding: 10px 0 60px 0;
+    min-height: auto;
+}
+
+/* Override specifically for about-hero in index page */
+#about.about-hero {
+    padding: 10px 0 60px 0;
+    min-height: auto;
+}
+
+.about-split, .about-hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    min-height: 600px;
+}
+
+.about-image-side, .hero-image-side {
+    position: relative;
+}
+
+.about-image-container, .hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.about-image, .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.about-content-side, .hero-content-side {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.about-content, .hero-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.about-content, .hero-content {
+    max-width: 500px;
+    width: 100%;
+}
+
+.about-label, .company-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #D4AF37;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.about-label::after, .company-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    width: 120px;
+    height: 1px;
+    background: #D4AF37;
+}
+
+.about-title, .hero-main-title {
+    font-size: 46px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin: 0 0 50px 0;
+    letter-spacing: -1.5px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+.about-features, .hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-feature, .hero-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.about-feature-check, .feature-check {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #D4AF37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.about-feature-text h3, .feature-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-feature-text p, .feature-text p {
+    font-size: 17px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-cta {
+    margin-top: 30px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #D4AF37;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-btn:hover {
+    background: #B8941F;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Fresh From The Oven Section */
+.fresh-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.fresh-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.fresh-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #D4AF37;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.fresh-label::before,
+.fresh-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: #D4AF37;
+}
+
+.fresh-label::before {
+    left: -65px;
+}
+
+.fresh-label::after {
+    right: -65px;
+}
+
+.fresh-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+.fresh-description {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.fresh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fresh-item {
+    text-align: center;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #D4AF37;
+    border-top: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Custom height borders kanan kiri */
+.fresh-item::before,
+.fresh-item::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #D4AF37;
+    top: 82px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.fresh-item::before {
+    left: 0;
+}
+
+.fresh-item::after {
+    right: 0;
+}
+
+.fresh-item:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.fresh-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+}
+
+.fresh-image {
+    margin-bottom: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+    background: #ffffff;
+    overflow: visible;
+    position: relative;
+
+    /* Border bawah saja */
+    
+}
+
+/* Garis atas terputus — sisi kiri dan kanan */
+.fresh-image::before,
+.fresh-image::after {
+    content: '';
+    position: absolute;
+    top: 40%; /* ujung atas, biar nyambung dengan border samping */
+    height: 2px;
+    background: #D4AF37;
+    width: 18%; /* sisakan 20% di tengah (putus) */
+    z-index: 3;
+}
+
+.fresh-image::before {
+    left: 0;
+}
+
+.fresh-image::after {
+    right: 0;
+}
+
+.fresh-image img {
+    max-width: 100%;
+    max-height: 120%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+
+.fresh-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 25px 30px 25px;
+    background: #ffffff;
+}
+
+.fresh-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #8B4513;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.fresh-content p {
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-hero-split, .about-split {
+        gap: 60px;
+        padding: 0 30px;
+    }
+    
+    .hero-main-title, .about-title {
+        font-size: 44px;
+    }    .fresh-grid {
+        gap: 30px;
+        padding: 0 30px;
+    }
+    
+    .fresh-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero, .about-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .about-hero-split, .about-split {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .hero-image-container, .about-image-container {
+        height: 350px;
+        order: 2;
+    }
+    
+    .hero-content-side, .about-content-side {
+        order: 1;
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .hero-main-title, .about-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-features, .about-features {
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .feature-text h3, .about-feature-text h3 {
+        font-size: 18px;
+    }
+    
+    .feature-text p, .about-feature-text p {
+        font-size: 15px;
+    }
+    
+    .company-label::after, .about-label::after {
+        display: none;
+    }
+      .fresh-section {
+        padding: 60px 0;
+    }
+    
+    .fresh-header {
+        margin-bottom: 40px;
+    }
+    
+    .fresh-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .fresh-title {
+        font-size: 28px;
+    }
+    
+    .fresh-label::before,
+    .fresh-label::after {
+        display: none;
+    }    .fresh-item {
+        padding: 0;
+        min-height: 280px;
+    }    .fresh-image {
+        height: 160px;
+        padding: 0;
+    }    .fresh-content {
+        padding: 30px 20px 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-split, .about-split {
+        padding: 0 16px;
+    }
+    
+    .hero-main-title, .about-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    
+    .hero-image-container, .about-image-container {
+        height: 300px;
+    }
+    
+    .company-label, .about-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    
+    .feature-check, .about-feature-check {
+        width: 24px;
+        height: 24px;
+    }
+}

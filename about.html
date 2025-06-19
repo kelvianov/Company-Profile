@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monyenyo - Indonesia's Best Brownies Pastry</title>    <!-- Favicon -->
+    <title>About Us - Monyenyo</title>
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧁</text></svg>" type="image/svg+xml">
     
-    <!-- Preload all hero images for better mobile performance -->
-    <link rel="preload" href="images/deskrop1.jpg" as="image">
-    <link rel="preload" href="images/desktop2.jpg" as="image">
-    <link rel="preload" href="images/desktop3.jpg" as="image">
-    
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-      <link rel="stylesheet" href="css/main.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/about.css">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>    <!-- Header -->
+<body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <!-- Hamburger Menu Button (Mobile Only) -->
@@ -36,14 +34,13 @@
                 <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>            <!-- Navigation Menu -->
             <nav class="nav-menu">
-                <a href="#home" class="nav-link">HOME</a>
-                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link active">ABOUT</a>
                 <a href="#menu" class="nav-link">MENU</a>
             </nav>
 
             <!-- Logo -->
             <div class="nav-logo">
-               
                 <span class="logo-text">Monyenyo</span>
             </div>
 
@@ -59,15 +56,17 @@
                 <i class="fas fa-phone" style="color: #FFD700;"></i>
                 <span>+62 8128 008 0275</span>
             </div>
-        </div>        <!-- Mobile Menu Overlay -->
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay">
             <div class="mobile-menu">
                 <div class="mobile-menu-header">
                     <span class="mobile-logo">Monyenyo</span>
                     <button class="close-menu" id="closeMenu">&times;</button>
                 </div>                <nav class="mobile-nav">
-                    <a href="#home" class="mobile-nav-link">HOME</a>
-                    <a href="about.html" class="mobile-nav-link">ABOUT</a>
+                    <a href="index.html" class="mobile-nav-link">HOME</a>
+                    <a href="about.html" class="mobile-nav-link active">ABOUT</a>
                     <a href="#menu" class="mobile-nav-link">MENU</a>
                     <a href="#blogs" class="mobile-nav-link">BLOGS</a>
                     <a href="#outlets" class="mobile-nav-link">OUTLETS</a>
@@ -89,29 +88,10 @@
                 </div>
             </div>
         </div>
-    </header>    <!-- Hero Section -->
-    <main class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                 <p class="hero-subtitle">Soft. Crispy. Irresistible.</p>
-                    <h1 class="hero-title">
-                        INDONESIA'S BEST<br>
-                        BROWNIES PASTRY
-                    </h1>
-                </div>
-            </div>            <!-- Pagination Dots -->
-            <div class="pagination-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </main>    <!-- About Section -->
+    </header>    <!-- About Hero Section -->
     <section class="about-hero" id="about">
         <div class="container">
-            <div class="about-hero-split">
-                <div class="hero-image-side">
+            <div class="about-hero-split">                <div class="hero-image-side">
                     <div class="hero-image-container">
                         <img src="images/about.png" alt="Monyenyo About" class="hero-image">
                     </div>
@@ -119,7 +99,7 @@
                 <div class="hero-content-side">
                     <div class="hero-content">
                         <span class="company-label">OUR COMPANY</span>
-                        <h2 class="hero-main-title">TRADITIONAL<br>INDONESIAN FOODS<br>AND HERITAGE</h2>
+                        <h1 class="hero-main-title">TRADITIONAL<br>INDONESIAN FOODS<br>AND HERITAGE</h1>
                         
                         <div class="hero-features">
                             <div class="hero-feature">
@@ -146,19 +126,14 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="about-cta">
-                            <a href="about.html" class="about-btn">Learn More About Us</a>
-                        </div>
                     </div>
-                </div>            </div>
-        </div>
-    </section>
+                </div>
+            </div>
+        </div>    </section>
 
-    <!-- Fresh From The Kitchen Section -->
+    <!-- Fresh From The Oven Section -->
     <section class="fresh-section">
-        <div class="container">
-            <div class="fresh-header">
+        <div class="container">            <div class="fresh-header">
                 <span class="fresh-label">SPECIALTY DISHES</span>
                 <h2 class="fresh-title">FRESH FROM THE KITCHEN</h2>
                 <p class="fresh-description">Experience the perfect fusion of traditional Indonesian flavors with modern culinary techniques, crafted daily with the finest ingredients.</p>
@@ -198,11 +173,7 @@
         </div>
     </section>
 
-    <!-- WhatsApp Floating Button -->
-    <div class="whatsapp-float">        <a href="https://wa.me/6281280080275" target="_blank">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386'/%3E%3C/svg%3E" alt="WhatsApp">
-        </a>
-    </div>    <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -212,22 +183,27 @@
                         <span class="logo-text">Monyenyo</span>
                     </div>
                     <p class="footer-desc">
-                        A group of highly skilled professionals building a future of shared success.
+                        Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.
                     </p>
-                </div>                <!-- Contact -->
+                </div>
+                
+                <!-- Contact -->
                 <div class="footer-contact">
-                    <h4>Contact Us</h4>                    <div class="contact-item">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
                         <span>Jl. Indonesia Raya, Sudirman, Jakarta Selatan, DKI Jakarta, Indonesia, 10150</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>mail@example.com</span>
+                        <span>hello@monyenyo.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+991-0123456789</span>
+                        <span>+62 8128 008 0275</span>
                     </div>
-                </div>                <!-- Social -->
+                </div>
+                
+                <!-- Social -->
                 <div class="footer-social">
                     <h4>Social Media</h4>
                     <div class="social-links">
@@ -241,9 +217,37 @@
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>© 2024 Kelvianov. All Rights Reserved.</p>
+                <p>© 2024 Monyenyo. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>    <script src="js/slider.js"></script>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/6281280080275" target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+        });
+
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) {
+                mobileMenuOverlay.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
