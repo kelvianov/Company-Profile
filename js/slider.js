@@ -209,23 +209,28 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Hamburger menu element not found!');
     }
 
+    let lastScrollPosition = 0;
     function handleHamburgerClick(e) {
         e.preventDefault();
         e.stopPropagation();
         console.log('Hamburger clicked/touched!');
-        
         if (hamburgerMenu && mobileMenuOverlay) {
-            // Check if menu is currently open
             if (mobileMenuOverlay.classList.contains('active')) {
-                // Menu is open, close it
                 closeMobileMenu();
             } else {
-                // Menu is closed, open it
+                // Simpan posisi scroll sebelum lock
+                lastScrollPosition = window.scrollY;
                 hamburgerMenu.classList.add('active');
                 hamburgerMenu.classList.add('menu-open');
                 mobileMenuOverlay.classList.add('active');
+                // Lock scroll dengan position fixed dan simpan posisi
+                document.body.style.position = 'fixed';
+                document.body.style.top = `-${lastScrollPosition}px`;
+                document.body.style.left = '0';
+                document.body.style.right = '0';
+                document.body.style.width = '100%';
                 document.body.style.overflow = 'hidden';
-                console.log('Menu opened');
+                console.log('Menu opened, scroll locked at', lastScrollPosition);
             }
         }
     }
@@ -237,7 +242,14 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburgerMenu.classList.remove('active');
             hamburgerMenu.classList.remove('menu-open');
             mobileMenuOverlay.classList.remove('active');
+            // Kembalikan scroll ke posisi semula
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            document.body.style.width = '';
             document.body.style.overflow = '';
+            window.scrollTo(0, lastScrollPosition);
         }
     }
 
