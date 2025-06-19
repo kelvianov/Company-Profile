@@ -2,11 +2,16 @@
 /* File ini hanya untuk viewport <= 768px */
 
 /* Header Mobile */
+.header {
+    pointer-events: none;
+}
+
 .header .container {
     flex-wrap: wrap;
     gap: 20px;
     position: relative;
     justify-content: space-between;
+    pointer-events: auto;
 }
 
 /* Hide Social Icons on Mobile */
@@ -16,21 +21,22 @@
 
 /* Show Hamburger Menu on Mobile - Left */
 .hamburger-menu {
-    display: flex;
+    display: flex !important;
     position: absolute;
     left: 20px;
     top: 80%;
     transform: translateY(-50%);
-    z-index: 1001;
-    margin-top: 20px;
+    z-index: 9999;
+    margin-top: 35px;
     flex-direction: column;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 5px;
+    pointer-events: auto;
 }
 
 .hamburger-menu span {
@@ -41,41 +47,52 @@
     margin: 3px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
+    pointer-events: none;
+    transform-origin: center;
 }
 
 .hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(5px, 6px);
+    background: #ffffff;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
 }
 
 .hamburger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(5px, -6px);
+    background: #ffffff;
 }
 
-/* Hide hamburger when mobile menu is active */
-.mobile-menu-overlay.active ~ .container .hamburger-menu {
-    display: none;
+/* Hide hamburger behind menu when overlay is active */
+.mobile-menu-overlay.active ~ .header .hamburger-menu {
+    z-index: 500;
 }
 
-.hamburger-menu.menu-open {
+/* .hamburger-menu.menu-open {
     display: none;
-}
+} */
 
 /* Logo positioned to the right */
 .nav-logo {
+    display: flex !important;
+    align-items: center;
     position: absolute;
     right: 20px;
     top: 80%;
     transform: translateY(-50%);
-    margin-top: 20px;
+    margin-top: 35px;
+    z-index: 1002;
 }
 
 .logo-text {
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 700;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Hide Desktop Navigation on Mobile */
@@ -85,7 +102,7 @@
 
 /* Show Mobile Menu Overlay */
 .mobile-menu-overlay {
-    display: block;
+    display: block !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -141,12 +158,14 @@
     font-size: 30px;
     color: #666;
     cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10000;
+    pointer-events: auto;
 }
 
 .mobile-nav {
@@ -382,31 +401,33 @@
     .header .container {
         gap: 12px;
         justify-content: space-between;
-    }
-    
-    /* Hamburger Menu Positioning - Left */
+    }    /* Hamburger Menu Positioning - Left */
     .hamburger-menu {
+        display: flex !important;
         left: 15px;
         top: 80%;
         transform: translateY(-50%);
-        z-index: 1001;
-        margin-top: 20px;
+        z-index: 9999;
+        margin-top: 35px;
         position: absolute;
-    }
-      
-    /* Logo positioning - Right */
+        pointer-events: auto;
+    }/* Logo positioning - Right */
     .nav-logo {
+        display: flex !important;
+        align-items: center;
         position: absolute;
         right: 15px;
         top: 80%;
         transform: translateY(-50%);
-        margin-top: 20px;
+        margin-top: 35px;
+        z-index: 1002;
     }
     
     .logo-text {
-        font-size: 22px;
-        color: #ffffff;
+        font-size: 22px !important;
+        color: #ffffff !important;
         font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
     
     .social-link {

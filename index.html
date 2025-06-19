@@ -163,26 +163,14 @@
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>© 2024 Webekspor. All Rights Reserved.</p>
+                <p>© 2024 Kelvianov. All Rights Reserved.</p>
             </div>
         </div>
     </footer>    <!-- JavaScript - Load core slider functionality for all devices -->
     <script src="js/slider-core.js"></script>
     
-    <!-- JavaScript - Load mobile-specific scripts only on mobile -->
-    <script>
-        // Load mobile-specific scripts only on mobile devices
-        if (window.innerWidth <= 768) {
-            // Load mobile menu functionality
-            const mobileMenuScript = document.createElement('script');
-            mobileMenuScript.src = 'js/mobile-menu.js';
-            document.head.appendChild(mobileMenuScript);
-            
-            // Load mobile optimizer
-            const mobileOptimizerScript = document.createElement('script');
-            mobileOptimizerScript.src = 'js/mobile-optimizer.js';
-            document.head.appendChild(mobileOptimizerScript);
-        }
-    </script>
+    <!-- JavaScript - Load mobile scripts directly -->
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-optimizer.js"></script>
 </body>
 </html>

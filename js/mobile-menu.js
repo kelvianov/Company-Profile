@@ -3,45 +3,92 @@
 
 // Hamburger Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing mobile menu...');
+    
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const closeMenu = document.getElementById('closeMenu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    // Check if elements exist (mobile only)
-    if (!hamburgerMenu || !mobileMenuOverlay || !closeMenu) {
-        return; // Exit if mobile elements don't exist
-    }
+    // Debug log
+    console.log('Hamburger element:', hamburgerMenu);
+    console.log('Overlay element:', mobileMenuOverlay);
+    console.log('Close element:', closeMenu);
 
-    // Open mobile menu
-    hamburgerMenu.addEventListener('click', function() {
-        hamburgerMenu.classList.add('active');
-        hamburgerMenu.classList.add('menu-open');
-        mobileMenuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    });
+    // Ensure hamburger exists
+    if (hamburgerMenu) {
+        console.log('Adding click listener to hamburger...');
+        
+        // Multiple event listeners for better compatibility
+        hamburgerMenu.addEventListener('click', handleHamburgerClick);
+        hamburgerMenu.addEventListener('touchstart', handleHamburgerClick);
+        
+        // Also add to the spans inside
+        const spans = hamburgerMenu.querySelectorAll('span');
+        spans.forEach(span => {
+            span.addEventListener('click', handleHamburgerClick);
+            span.addEventListener('touchstart', handleHamburgerClick);
+        });
+    } else {
+        console.error('Hamburger menu element not found!');
+    }    function handleHamburgerClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Hamburger clicked/touched!');
+        
+        if (hamburgerMenu && mobileMenuOverlay) {
+            // Check if menu is currently open
+            if (mobileMenuOverlay.classList.contains('active')) {
+                // Menu is open, close it
+                closeMobileMenu();
+            } else {
+                // Menu is closed, open it
+                hamburgerMenu.classList.add('active');
+                hamburgerMenu.classList.add('menu-open');
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                console.log('Menu opened');
+            }
+        }
+    }
 
     // Close mobile menu
     function closeMobileMenu() {
-        hamburgerMenu.classList.remove('active');
-        hamburgerMenu.classList.remove('menu-open');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        console.log('Closing mobile menu');
+        if (hamburgerMenu && mobileMenuOverlay) {
+            hamburgerMenu.classList.remove('active');
+            hamburgerMenu.classList.remove('menu-open');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }    // Close menu when clicking close button
+    if (closeMenu) {
+        closeMenu.addEventListener('click', closeMobileMenu);
+        closeMenu.addEventListener('touchstart', closeMobileMenu);
+        console.log('Close button event listener added');
+    } else {
+        console.error('Close menu button not found!');
     }
 
-    closeMenu.addEventListener('click', closeMobileMenu);
-
     // Close menu when clicking overlay
-    mobileMenuOverlay.addEventListener('click', function(e) {
-        if (e.target === mobileMenuOverlay) {
-            closeMobileMenu();
-        }
-    });
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                console.log('Overlay clicked, closing menu');
+                closeMobileMenu();
+            }
+        });
+    }
 
     // Close menu when clicking nav links
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+    if (mobileNavLinks.length > 0) {
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Nav link clicked, closing menu');
+                closeMobileMenu();
+            });
+        });
+    }
 
     // Close menu on escape key
     document.addEventListener('keydown', function(e) {
