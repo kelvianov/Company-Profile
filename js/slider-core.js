@@ -1,3 +1,6 @@
+/* SLIDER CORE - Universal JavaScript untuk slider functionality */
+/* File ini berisi logic slider yang sama untuk desktop dan mobile */
+
 let currentSlide = 0;
 const hero = document.querySelector('.hero');
 const subtitle = document.querySelector('.hero-subtitle');
@@ -42,7 +45,9 @@ function showSlide(index) {
     
     setTimeout(() => {
         // Update background image with smooth transition
-        hero.style.backgroundImage = `url('images/${slides[index].image}')`;        // Remove previous slide classes
+        hero.style.backgroundImage = `url('images/${slides[index].image}')`;
+        
+        // Remove previous slide classes
         hero.className = 'hero';
         
         // Add slide-specific class
@@ -55,28 +60,34 @@ function showSlide(index) {
         }
         
         // Update text content
-        subtitle.textContent = slides[index].subtitle;
+        subtitle.innerHTML = slides[index].subtitle;
         title.innerHTML = slides[index].title;
         
-        // Fade text back in with delay for smoother effect
+        // Fade text back in
         setTimeout(() => {
             subtitle.style.opacity = '1';
             title.style.opacity = '1';
-        }, 100);
-    }, 400);
+        }, 200);
+        
+    }, 300);
     
     // Update dots
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
 }
 
+// Auto-play functionality
 function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
 }
 
-// Auto slide every 4 seconds
-setInterval(nextSlide, 4000);
+// Start auto-play after page load
+let autoPlayInterval;
+window.addEventListener('load', () => {
+    autoPlayInterval = setInterval(nextSlide, 5000);
+});
 
 // Manual dot navigation
 dots.forEach((dot, index) => {
@@ -88,46 +99,3 @@ dots.forEach((dot, index) => {
 
 // Initialize first slide
 showSlide(0);
-
-// Hamburger Menu Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const closeMenu = document.getElementById('closeMenu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');    // Open mobile menu
-    hamburgerMenu.addEventListener('click', function() {
-        hamburgerMenu.classList.add('active');
-        hamburgerMenu.classList.add('menu-open');
-        mobileMenuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    });
-
-    // Close mobile menu
-    function closeMobileMenu() {
-        hamburgerMenu.classList.remove('active');
-        hamburgerMenu.classList.remove('menu-open');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-
-    closeMenu.addEventListener('click', closeMobileMenu);
-
-    // Close menu when clicking overlay
-    mobileMenuOverlay.addEventListener('click', function(e) {
-        if (e.target === mobileMenuOverlay) {
-            closeMobileMenu();
-        }
-    });
-
-    // Close menu when clicking nav links
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-});
