@@ -10,15 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollY = window.scrollY;
         const scrollDirection = scrollY > lastScrollY ? 'down' : 'up';
         const isMobile = window.innerWidth <= 768;
-        
-        // Mobile behavior - hide navbar when scrolling down
+          // Mobile behavior - hide/show navbar
         if (isMobile) {
-            if (scrollDirection === 'down' && scrollY > 50) {
+            // Clear all classes first
+            header.classList.remove('hide-on-scroll', 'show-on-scroll-up');
+            
+            if (scrollY <= 50) {
+                // At top - transparent navbar
+                console.log('At top - transparent navbar');
+            } else if (scrollDirection === 'down' && scrollY > 50) {
+                // Scrolling down - hide navbar
                 header.classList.add('hide-on-scroll');
                 console.log('Adding hide-on-scroll class');
-            } else {
-                header.classList.remove('hide-on-scroll');
-                console.log('Removing hide-on-scroll class');
+            } else if (scrollDirection === 'up' && scrollY > 50) {
+                // Scrolling up - show black navbar
+                header.classList.add('show-on-scroll-up');
+                console.log('Adding show-on-scroll-up class');
             }
         } else {
             // Desktop behavior (unchanged)

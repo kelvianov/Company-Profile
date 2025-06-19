@@ -573,10 +573,76 @@ body {
         display: flex;
         position: absolute;
         left: 20px;
-        top: 80%;
+        top: 50%;
         transform: translateY(-50%);
         z-index: 1001;
-        margin-top: 20px;
+    }      /* Navbar coklat saat scroll up - dengan specificity tinggi */
+    .header.show-on-scroll-up {
+        transform: translateY(0) !important;
+        background: rgba(101, 67, 33, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: all 0.3s ease !important;
+        opacity: 1 !important;
+        height: 70px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .header.show-on-scroll-up .container {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }    /* Force hamburger to left corner with highest specificity */    @media (max-width: 768px) {        .header.show-on-scroll-up .hamburger-menu {
+            display: flex !important;
+            position: fixed !important;
+            left: 20px !important;
+            top: 15px !important;
+            transform: none !important;
+            z-index: 9999 !important;
+            margin: 0 !important;
+            margin-top: 0 !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+        }
+          .header.show-on-scroll-up .hamburger-menu span {
+            background-color: white !important;
+            width: 28px !important;
+            height: 3px !important;
+            margin: 3px 0 !important;
+        }        /* Force title to right corner with highest specificity */
+        .header.show-on-scroll-up .logo-text {
+            display: block !important;
+            color: white !important;
+            position: fixed !important;
+            right: 10px !important;
+            top: 15px !important;
+            transform: none !important;
+            font-size: 24px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+            padding: 0 !important;
+            z-index: 9999 !important;
+        }
+        
+        .header.show-on-scroll-up .nav-logo {
+            display: block !important;
+            position: fixed !important;
+            right: 10px !important;
+            top: 15px !important;
+            transform: none !important;
+            margin: 0 !important;
+            z-index: 9999 !important;
+        }
+    }
+    
+    .header.show-on-scroll-up .social-icons,
+    .header.show-on-scroll-up .nav-menu,
+    .header.show-on-scroll-up .nav-menu-right,
+    .header.show-on-scroll-up .phone-number {
+        display: none !important;
     }
     
     /* Logo positioned to the right */
@@ -851,7 +917,6 @@ body {
     
     /* Ensure hero content is above loading overlay */
     .hero-content {
-        position: relative;
-        z-index: 10;
+        position: relative;        z-index: 10;
     }
 }
