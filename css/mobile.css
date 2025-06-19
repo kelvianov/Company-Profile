@@ -1,9 +1,26 @@
 /* MOBILE CSS - STYLES KHUSUS UNTUK MOBILE */
 /* File ini hanya untuk viewport <= 768px */
 
+/* Remove any top gaps on mobile */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 /* Header Mobile */
 .header {
     pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
 }
 
 .header .container {
@@ -260,15 +277,19 @@
 
 /* Hero Mobile Positioning */
 .hero {
-    align-items: flex-end;
-    padding-bottom: 180px;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    padding-top: 0;
+    margin-top: 0;
+    justify-content: flex-start;
 }
 
 .hero-content {
-    padding-top: 0;
+    padding-top: 100px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 0;
 }
 
 .hero-text {
@@ -433,15 +454,16 @@
     .social-link {
         font-size: 18px;
     }
-    
-    /* Hero Small Mobile */
+      /* Hero Small Mobile */
     .hero {
-        padding-bottom: 160px;
+        padding-bottom: 40px;
+        padding-top: 70px;
     }
-    
-    .hero-content {
+      .hero-content {
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 15px;
+        margin-top: 0;
     }
     
     .hero-subtitle {
