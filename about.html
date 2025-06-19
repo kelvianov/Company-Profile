@@ -34,8 +34,8 @@
                 <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>            <!-- Navigation Menu -->
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link">HOME</a>
-                <a href="about.html" class="nav-link active">ABOUT</a>
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
                 <a href="#menu" class="nav-link">MENU</a>
             </nav>
 
@@ -56,17 +56,15 @@
                 <i class="fas fa-phone" style="color: #FFD700;"></i>
                 <span>+62 8128 008 0275</span>
             </div>
-        </div>
-        
-        <!-- Mobile Menu Overlay -->
+        </div>        <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay">
             <div class="mobile-menu">
                 <div class="mobile-menu-header">
                     <span class="mobile-logo">Monyenyo</span>
                     <button class="close-menu" id="closeMenu">&times;</button>
                 </div>                <nav class="mobile-nav">
-                    <a href="index.html" class="mobile-nav-link">HOME</a>
-                    <a href="about.html" class="mobile-nav-link active">ABOUT</a>
+                    <a href="#home" class="mobile-nav-link">HOME</a>
+                    <a href="about.html" class="mobile-nav-link">ABOUT</a>
                     <a href="#menu" class="mobile-nav-link">MENU</a>
                     <a href="#blogs" class="mobile-nav-link">BLOGS</a>
                     <a href="#outlets" class="mobile-nav-link">OUTLETS</a>
@@ -229,25 +227,49 @@
         </a>
     </div>
 
-    <!-- Mobile Menu Script -->
+    <!-- Mobile Menu Script (hapus script inline, ganti ke slider.js) -->
+    <script src="js/slider.js"></script>
     <script>
-        const hamburgerMenu = document.getElementById('hamburgerMenu');
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        const closeMenu = document.getElementById('closeMenu');
-
-        hamburgerMenu.addEventListener('click', () => {
-            mobileMenuOverlay.classList.add('active');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenuOverlay.classList.remove('active');
-        });
-
-        mobileMenuOverlay.addEventListener('click', (e) => {
-            if (e.target === mobileMenuOverlay) {
-                mobileMenuOverlay.classList.remove('active');
-            }
-        });
-    </script>
+// Fallback: Aktifkan hamburger jika slider.js gagal, dengan scroll lock yang benar
+(function() {
+  var hamburger = document.getElementById('hamburgerMenu');
+  var overlay = document.getElementById('mobileMenuOverlay');
+  var closeBtn = document.getElementById('closeMenu');
+  var lastScrollPosition = 0;
+  if (!hamburger || !overlay || !closeBtn) return;
+  // Jika sudah ada event, jangan override
+  if (overlay.classList.contains('active')) return;
+  hamburger.addEventListener('click', function(e) {
+    e.preventDefault();
+    lastScrollPosition = window.scrollY;
+    overlay.classList.add('active');
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${lastScrollPosition}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+  });
+  function closeMenu() {
+    overlay.classList.remove('active');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    document.body.style.overflow = '';
+    window.scrollTo(0, lastScrollPosition);
+  }
+  closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeMenu();
+  });
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+      closeMenu();
+    }
+  });
+})();
+</script>
 </body>
 </html>
