@@ -248,20 +248,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 250);
         });
-    }
-
-    // Mobile performance optimizations
+    }    // Mobile performance optimizations
     document.addEventListener('DOMContentLoaded', function() {
-        // Reduce animation intensity on mobile
-        if (window.innerWidth <= 480) {
-            const style = document.createElement('style');
-            style.textContent = `
-                * {
-                    transition-duration: 0.2s !important;
-                    animation-duration: 0.2s !important;
-                }
-            `;
-            document.head.appendChild(style);
-        }
+        // Mobile optimizations without affecting animations
+        console.log('Mobile optimizations loaded');
     });
 })();
