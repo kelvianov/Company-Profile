@@ -507,4 +507,15 @@
         width: 24px;
         height: 24px;
     }
+      /* Penyesuaian garis untuk mobile */
+    .fresh-item::before,
+    .fresh-item::after {
+        top: 64px; /* 40% dari 160px height mobile */
+    }
+    
+    .fresh-image::before,
+    .fresh-image::after {
+        top: 40%; /* tetap 40% untuk konsistensi */
+        width: 18%; /* tetap ukuran yang sama */
+    }
 }
