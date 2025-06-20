@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('show-on-scroll-up');
             header.classList.remove('desktop-transparent', 'desktop-solid');
             const isAbout = window.location.pathname.includes('about.html');
-            if (isAbout) {
+            const isMenu = window.location.pathname.includes('menu.html');
+            if (isAbout || isMenu) {
                 header.classList.add('desktop-solid');
             } else {
                 if (scrollY > 100) {
