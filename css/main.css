@@ -593,11 +593,12 @@ body {
         height: 100% !important;
         display: flex !important;
         align-items: center !important;
-    }    /* Force hamburger to left corner with highest specificity */    @media (max-width: 768px) {        .header.show-on-scroll-up .hamburger-menu {
+    }    /* Force hamburger to left corner with highest specificity */   
+     @media (max-width: 768px) {        .header.show-on-scroll-up .hamburger-menu {
             display: flex !important;
             position: fixed !important;
             left: 20px !important;
-            top: 15px !important;
+            top: 19px !important;
             transform: none !important;
             z-index: 9999 !important;
             margin: 0 !important;
