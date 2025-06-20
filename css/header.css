@@ -47,6 +47,25 @@
     font-size: 15px;
     letter-spacing: 1px;
     transition: opacity 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 3px;
+    background: transparent;
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    background: #8B4513;
 }
 
 .nav-link:hover {
@@ -266,6 +285,17 @@
     background: #8B4513;
     color: white;
     transform: translateY(-2px);
+}
+
+/* Garis bawah nav-link hanya untuk navbar solid, bukan transparan */
+.header.desktop-solid .nav-link.active::after,
+.header.desktop-solid .nav-link:hover::after {
+    background: #8B4513;
+}
+
+/* Nonaktifkan underline di navbar transparan */
+.header.desktop-transparent .nav-link::after {
+    background: transparent !important;
 }
 
 /* Responsive header/navbar/mobile menu styles (media queries) akan dipindah juga ke sini */
