@@ -30,7 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // Desktop behavior (unchanged)
             header.classList.remove('hide-on-scroll'); // Remove mobile class in desktop
-            
+            header.classList.remove('show-on-scroll-up'); // Tambahan: pastikan class ini juga dihapus di desktop
+
+            // Always show header in desktop, even at top
+            header.style.transform = 'none';
+            header.style.opacity = '1';
+            header.style.pointerEvents = 'auto';
+            header.style.transition = 'none';
+
             if (scrollY > 100) {
                 // When scrolled down, add white background
                 header.style.background = 'rgba(255, 255, 255, 0.95)';

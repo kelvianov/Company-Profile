@@ -986,3 +986,40 @@ body {
   font-weight: 700;
   letter-spacing: -0.5px;
 }
+
+/* --- FIX: Pastikan header selalu tampil di desktop, hide-on-scroll hanya mobile --- */
+@media (min-width: 769px) {
+  .header.hide-on-scroll {
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: none !important;
+  }
+}
+
+/* --- FORCE header SELALU TAMPIL DI DESKTOP, APAPUN CLASS-NYA --- */
+@media (min-width: 769px) {
+  .header,
+  .header.hide-on-scroll,
+  .header.show-on-scroll-up {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: #fff !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+    transition: none !important;
+  }
+  .header .nav-link,
+  .header .logo-text,
+  .header .social-link,
+  .header .phone-number {
+    color: #222 !important;
+  }
+}
