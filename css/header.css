@@ -269,3 +269,11 @@
 }
 
 /* Responsive header/navbar/mobile menu styles (media queries) akan dipindah juga ke sini */
+
+@media (max-width: 768px) {
+  .header .logo-text {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+}
