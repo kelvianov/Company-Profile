@@ -1,0 +1,125 @@
+/* Footer Styles */
+.footer {
+    background: #ffffff;
+    color: #2c2c2c;
+    padding: 40px 0 20px;
+    margin-top: 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.footer-main .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.footer-main .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+.footer-desc {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    max-width: 250px;
+    line-height: 1.5;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 300px;
+}
+
+.footer-contact h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 0;
+    color: #2c2c2c;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.contact-item:first-of-type {
+    margin-bottom: 6px;
+}
+
+.contact-item i {
+    color: #2c2c2c;
+    width: 16px;
+    text-align: center;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-social h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 0;
+    color: #2c2c2c;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #f8f9fa;
+    color: #666;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-social .social-link:hover {
+    background: #8B4513;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.footer-bottom p {
+    color: #888;
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Responsive footer styles (media queries) akan dipindah juga ke sini */

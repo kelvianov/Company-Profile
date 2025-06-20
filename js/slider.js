@@ -5,30 +5,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     let lastScrollY = window.scrollY;
-    
     function updateNavbar() {
         const scrollY = window.scrollY;
         const scrollDirection = scrollY > lastScrollY ? 'down' : 'up';
         const isMobile = window.innerWidth <= 768;
-          // Mobile behavior - hide/show navbar
         if (isMobile) {
-            // Clear all classes first
             header.classList.remove('hide-on-scroll', 'show-on-scroll-up');
-            
             if (scrollY <= 50) {
                 // At top - transparent navbar
-                console.log('At top - transparent navbar');
             } else if (scrollDirection === 'down' && scrollY > 50) {
-                // Scrolling down - hide navbar
                 header.classList.add('hide-on-scroll');
-                console.log('Adding hide-on-scroll class');
             } else if (scrollDirection === 'up' && scrollY > 50) {
-                // Scrolling up - show black navbar
                 header.classList.add('show-on-scroll-up');
-                console.log('Adding show-on-scroll-up class');
             }
         } else {
-            // Desktop behavior: index = transparan/putih, about = selalu putih
             header.classList.remove('hide-on-scroll');
             header.classList.remove('show-on-scroll-up');
             header.classList.remove('desktop-transparent', 'desktop-solid');
@@ -43,14 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-        
         lastScrollY = scrollY;
     }
-    
-    // Listen for scroll events
     window.addEventListener('scroll', updateNavbar);
-    
-    // Initial check
     updateNavbar();
 });
 
@@ -156,70 +141,36 @@ showSlide(0);
 
 // MOBILE MENU FUNCTIONALITY
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing mobile menu...');
-    
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const closeMenu = document.getElementById('closeMenu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    // Debug log
-    console.log('Hamburger element:', hamburgerMenu);
-    console.log('Overlay element:', mobileMenuOverlay);
-    console.log('Close element:', closeMenu);
-
-    // Ensure hamburger exists
-    if (hamburgerMenu) {
-        console.log('Adding click listener to hamburger...');
-        
-        // Multiple event listeners for better compatibility
-        hamburgerMenu.addEventListener('click', handleHamburgerClick);
-        hamburgerMenu.addEventListener('touchstart', handleHamburgerClick);
-        
-        // Also add to the spans inside
-        const spans = hamburgerMenu.querySelectorAll('span');
-        spans.forEach(span => {
-            span.addEventListener('click', handleHamburgerClick);
-            span.addEventListener('touchstart', handleHamburgerClick);
-        });
-    } else {
-        console.error('Hamburger menu element not found!');
-    }
-
     let lastScrollPosition = 0;
     function handleHamburgerClick(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Hamburger clicked/touched!');
         if (hamburgerMenu && mobileMenuOverlay) {
             if (mobileMenuOverlay.classList.contains('active')) {
                 closeMobileMenu();
             } else {
-                // Simpan posisi scroll sebelum lock
                 lastScrollPosition = window.scrollY;
                 hamburgerMenu.classList.add('active');
                 hamburgerMenu.classList.add('menu-open');
                 mobileMenuOverlay.classList.add('active');
-                // Lock scroll dengan position fixed dan simpan posisi
                 document.body.style.position = 'fixed';
                 document.body.style.top = `-${lastScrollPosition}px`;
                 document.body.style.left = '0';
                 document.body.style.right = '0';
                 document.body.style.width = '100%';
                 document.body.style.overflow = 'hidden';
-                console.log('Menu opened, scroll locked at', lastScrollPosition);
             }
         }
     }
-
-    // Close mobile menu
     function closeMobileMenu() {
-        console.log('Closing mobile menu');
         if (hamburgerMenu && mobileMenuOverlay) {
             hamburgerMenu.classList.remove('active');
             hamburgerMenu.classList.remove('menu-open');
             mobileMenuOverlay.classList.remove('active');
-            // Kembalikan scroll ke posisi semula
             document.body.style.position = '';
             document.body.style.top = '';
             document.body.style.left = '';
@@ -229,37 +180,33 @@ document.addEventListener('DOMContentLoaded', function() {
             window.scrollTo(0, lastScrollPosition);
         }
     }
-
-    // Close menu when clicking close button
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', handleHamburgerClick);
+        hamburgerMenu.addEventListener('touchstart', handleHamburgerClick);
+        const spans = hamburgerMenu.querySelectorAll('span');
+        spans.forEach(span => {
+            span.addEventListener('click', handleHamburgerClick);
+            span.addEventListener('touchstart', handleHamburgerClick);
+        });
+    }
     if (closeMenu) {
         closeMenu.addEventListener('click', closeMobileMenu);
         closeMenu.addEventListener('touchstart', closeMobileMenu);
-        console.log('Close button event listener added');
-    } else {
-        console.error('Close menu button not found!');
     }
-
-    // Close menu when clicking overlay
     if (mobileMenuOverlay) {
         mobileMenuOverlay.addEventListener('click', function(e) {
             if (e.target === mobileMenuOverlay) {
-                console.log('Overlay clicked, closing menu');
                 closeMobileMenu();
             }
         });
     }
-
-    // Close menu when clicking nav links
     if (mobileNavLinks.length > 0) {
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', function() {
-                console.log('Nav link clicked, closing menu');
                 closeMobileMenu();
             });
         });
     }
-
-    // Close menu on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
             closeMobileMenu();
