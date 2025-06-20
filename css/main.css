@@ -609,6 +609,66 @@ body {
     box-shadow: 0 10px 20px rgba(139, 69, 19, 0.3);
 }
 
+/* Menu Section Responsive */
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 60px 0;
+    }
+    
+    .menu-section-title {
+        font-size: 2.5rem;
+    }
+    
+    .menu-section-description {
+        font-size: 1rem;
+    }
+    
+    .menu-section-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .menu-section-image {
+        height: 200px;
+    }
+    
+    .menu-section-content {
+        padding: 25px;
+    }
+    
+    .menu-section-details {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-section-title {
+        font-size: 2rem;
+    }
+    
+    .menu-section-grid {
+        padding: 0 15px;
+    }
+    
+    .menu-section-content {
+        padding: 20px;
+    }
+}
+
+/* Fix untuk menu5.png yang terlalu zoom */
+.menu-section-item:nth-child(3) .menu-section-image img {
+    object-fit: contain;
+    object-position: center;
+    background: #f8f9fa;
+}
+
+.menu-section-item:nth-child(3):hover .menu-section-image img {
+    transform: scale(1.05);
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     /* Header positioning and hide functionality */

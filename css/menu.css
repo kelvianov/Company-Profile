@@ -85,6 +85,17 @@
     transform: scale(1.1);
 }
 
+/* Fix untuk menu5.png yang terlalu zoom di menu.html */
+.menu-item:nth-child(3) .menu-image img {
+    object-fit: contain;
+    object-position: center;
+    background: #f8f9fa;
+}
+
+.menu-item:nth-child(3):hover .menu-image img {
+    transform: scale(1.05);
+}
+
 .menu-overlay {
     position: absolute;
     top: 0;
