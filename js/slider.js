@@ -28,49 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Adding show-on-scroll-up class');
             }
         } else {
-            // Desktop behavior (unchanged)
-            header.classList.remove('hide-on-scroll'); // Remove mobile class in desktop
-            header.classList.remove('show-on-scroll-up'); // Tambahan: pastikan class ini juga dihapus di desktop
-
-            // Always show header in desktop, even at top
-            header.style.transform = 'none';
-            header.style.opacity = '1';
-            header.style.pointerEvents = 'auto';
-            header.style.transition = 'none';
-
-            if (scrollY > 100) {
-                // When scrolled down, add white background
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
-                header.style.transition = 'all 0.3s ease';
-                
-                // Change text colors to dark
-                const socialLinks = header.querySelectorAll('.social-link');
-                const navLinks = header.querySelectorAll('.nav-link');
-                const logoText = header.querySelector('.logo-text');
-                const phoneNumber = header.querySelector('.phone-number');
-                
-                socialLinks.forEach(link => link.style.color = '#333333');
-                navLinks.forEach(link => link.style.color = '#333333');
-                if (logoText) logoText.style.color = '#333333';
-                if (phoneNumber) phoneNumber.style.color = '#333333';
+            // Desktop behavior: index = transparan/putih, about = selalu putih
+            header.classList.remove('hide-on-scroll');
+            header.classList.remove('show-on-scroll-up');
+            header.classList.remove('desktop-transparent', 'desktop-solid');
+            const isAbout = window.location.pathname.includes('about.html');
+            if (isAbout) {
+                header.classList.add('desktop-solid');
             } else {
-                // When at top, return to transparent
-                header.style.background = 'transparent';
-                header.style.backdropFilter = 'none';
-                header.style.borderBottom = 'none';
-                
-                // Change text colors back to white
-                const socialLinks = header.querySelectorAll('.social-link');
-                const navLinks = header.querySelectorAll('.nav-link');
-                const logoText = header.querySelector('.logo-text');
-                const phoneNumber = header.querySelector('.phone-number');
-                
-                socialLinks.forEach(link => link.style.color = 'white');
-                navLinks.forEach(link => link.style.color = 'white');
-                if (logoText) logoText.style.color = 'white';
-                if (phoneNumber) phoneNumber.style.color = 'white';
+                if (scrollY > 100) {
+                    header.classList.add('desktop-solid');
+                } else {
+                    header.classList.add('desktop-transparent');
+                }
             }
         }
         
