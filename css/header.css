@@ -89,14 +89,22 @@
     letter-spacing: -0.5px;
 }
 
-.phone-number {
+.language-toggle {
     color: white;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     gap: 8px;
     margin-right: -99px;
+}
+
+/* Language toggle color for transparent and solid navbar */
+.header.desktop-transparent .language-toggle {
+    color: #fff;
+}
+.header.desktop-solid .language-toggle {
+    color: #222;
 }
 
 /* Hamburger Menu Button (Hidden on Desktop) */
@@ -305,5 +313,8 @@
     font-size: 1.6rem;
     line-height: 1.1;
     letter-spacing: -0.5px;
+  }
+  .language-toggle {
+    display: none !important;
   }
 }
