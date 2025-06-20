@@ -58,7 +58,7 @@ const slides = [
         title: 'INDONESIA\'S BEST<br>CAKE & PASTRY'
     },
     {
-        image: 'desktop3.jpg',
+        image: 'desktop4.jpg', // diganti dari desktop3.jpg
         subtitle: 'Sweet. Perfect. Unforgettable.',
         title: 'INDONESIA\'S BEST<br>DESSERT EXPERIENCE'
     }
