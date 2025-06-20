@@ -976,3 +976,12 @@ body {
   }
 }
 /* === END FORCE FULLSCREEN MENU HAMBURGER NAVBAR COKLAT === */
+
+.footer .logo-text {
+  display: inline !important;
+  visibility: visible !important;
+  color: #222 !important;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
