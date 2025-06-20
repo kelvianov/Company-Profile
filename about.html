@@ -26,6 +26,25 @@
                 <span></span>
                 <span></span>
             </button>
+            <style>
+            @media (max-width: 900px) {
+              .mobile-menu-overlay.active ~ .container .hamburger-menu,
+              .mobile-menu-overlay.active + .container .hamburger-menu,
+              .mobile-menu-overlay.active .hamburger-menu,
+              .mobile-menu-overlay.active .header .hamburger-menu,
+              .mobile-menu-overlay.active ~ .hamburger-menu,
+              .mobile-menu-overlay.active + .hamburger-menu {
+                display: none !important;
+              }
+              .mobile-menu-header .hamburger-menu {
+                display: none !important;
+              }
+              /* Tambahan: hide hamburger-menu jika .mobile-menu-overlay aktif (global) */
+              body:has(.mobile-menu-overlay.active) .hamburger-menu {
+                display: none !important;
+              }
+            }
+            </style>
 
             <!-- Social Media Icons -->
             <div class="social-icons">

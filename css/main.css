@@ -1065,3 +1065,12 @@ body {
     color: #222 !important;
   }
 }
+
+/* Hide hamburger when mobile menu is active (fix for overlay) */
+@media (max-width: 900px) {
+  .mobile-menu-overlay.active ~ .container .hamburger-menu,
+  .mobile-menu-overlay.active + .container .hamburger-menu,
+  .mobile-menu-overlay.active .hamburger-menu {
+    display: none !important;
+  }
+}
