@@ -99,9 +99,14 @@ function showSlide(index) {
             hero.classList.add('slide-3');
         }
         
-        // Update text content
+        // Update text content (tanpa data-translate, agar tidak diubah translation.js)
         subtitle.innerHTML = slides[index].subtitle;
         title.innerHTML = slides[index].title;
+        // Hapus data-translate dan tambahkan attribute custom agar translation.js skip
+        subtitle.removeAttribute('data-translate');
+        title.removeAttribute('data-translate');
+        subtitle.setAttribute('data-no-translate', '1');
+        title.setAttribute('data-no-translate', '1');
         
         // Fade text back in
         setTimeout(() => {

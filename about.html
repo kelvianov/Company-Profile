@@ -71,10 +71,10 @@
             </nav>
 
             <!-- Phone Number -->
-             <div class="language-toggle">
-                <span class="lang-btn active" data-lang="en">EN</span>
+            <div class="language-toggle" style="cursor:pointer;">
+                <span class="lang-btn active" data-lang="en" style="cursor:pointer;">EN</span>
                 <span class="lang-separator">|</span>
-                <span class="lang-btn" data-lang="id">ID</span>
+                <span class="lang-btn" data-lang="id" style="cursor:pointer;">ID</span>
             </div>
         </div>        <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -290,6 +290,17 @@
     }
   });
 })();
+</script>
+<script src="js/translation.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = btn.getAttribute('data-lang');
+        localStorage.setItem('monyenyo_lang', lang);
+      });
+    });
+  });
 </script>
 </body>
 </html>

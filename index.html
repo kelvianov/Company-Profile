@@ -35,9 +35,9 @@
                 <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>            <!-- Navigation Menu -->            <nav class="nav-menu">
-                <a href="#home" class="nav-link">HOME</a>
-                <a href="about.html" class="nav-link">ABOUT</a>
-                <a href="menu.html" class="nav-link">MENU</a>
+                <a href="#home" class="nav-link" data-translate="HOME">HOME</a>
+                <a href="about.html" class="nav-link" data-translate="ABOUT">ABOUT</a>
+                <a href="menu.html" class="nav-link" data-translate="MENU">MENU</a>
             </nav>
 
             <!-- Logo -->
@@ -48,16 +48,16 @@
 
             <!-- Right Navigation -->
             <nav class="nav-menu-right">
-                <a href="#blogs" class="nav-link">BLOGS</a>
-                <a href="#outlets" class="nav-link">OUTLETS</a>
-                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="#blogs" class="nav-link" data-translate="BLOGS">BLOGS</a>
+                <a href="#outlets" class="nav-link" data-translate="OUTLETS">OUTLETS</a>
+                <a href="#contact" class="nav-link" data-translate="CONTACT">CONTACT</a>
             </nav>
 
             <!-- Phone Number -->
-            <div class="language-toggle">
-                <span class="lang-btn active" data-lang="en">EN</span>
+            <div class="language-toggle" style="cursor:pointer;">
+                <span class="lang-btn active" data-lang="en" style="cursor:pointer;">EN</span>
                 <span class="lang-separator">|</span>
-                <span class="lang-btn" data-lang="id">ID</span>
+                <span class="lang-btn" data-lang="id" style="cursor:pointer;">ID</span>
             </div>
         </div>        <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -337,5 +337,17 @@
             </div>
         </div>
     </footer>    <script src="js/slider.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+      // Save language to localStorage on click (universal, bisa di-copy ke about.html/menu.html)
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var lang = btn.getAttribute('data-lang');
+            localStorage.setItem('monyenyo_lang', lang);
+          });
+        });
+      });
+    </script>
 </body>
 </html>

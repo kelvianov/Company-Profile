@@ -41,10 +41,10 @@
                 <a href="outlets.html" class="nav-link">OUTLETS</a>
                 <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
-            <div class="language-toggle">
-                <span class="lang-btn active" data-lang="en">EN</span>
+          <div class="language-toggle" style="cursor:pointer;">
+                <span class="lang-btn active" data-lang="en" style="cursor:pointer;">EN</span>
                 <span class="lang-separator">|</span>
-                <span class="lang-btn" data-lang="id">ID</span>
+                <span class="lang-btn" data-lang="id" style="cursor:pointer;">ID</span>
             </div>
         </div>
         <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -83,9 +83,9 @@
     <section class="menu-hero">
         <div class="container">
             <div class="menu-header-content">
-                <span class="menu-label">OUR SPECIALTY</span>
-                <h1 class="menu-title">DELICIOUS MENU</h1>
-                <p class="menu-description">Discover our signature collection of traditional Indonesian brownies and pastries, crafted with love and the finest ingredients.</p>
+                <span class="menu-label" data-translate="OUR SPECIALTY">OUR SPECIALTY</span>
+                <h1 class="menu-title" data-translate="DELICIOUS MENU">DELICIOUS MENU</h1>
+                <p class="menu-description" data-translate="Discover our signature collection of traditional Indonesian brownies and pastries, crafted with love and the finest ingredients.">Discover our signature collection of traditional Indonesian brownies and pastries, crafted with love and the finest ingredients.</p>
             </div>
         </div>
     </section>
@@ -103,10 +103,10 @@
                         </div>
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-name">Chocolate Brownies</h3>
-                        <p class="menu-desc">Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.</p>
+                        <h3 class="menu-name" data-translate="Chocolate Brownies">Chocolate Brownies</h3>
+                        <p class="menu-desc" data-translate="Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.">Rich and fudgy chocolate brownies made with premium cocoa and traditional Indonesian spices. Perfect balance of sweetness and texture.</p>
                         <div class="menu-details">
-                            <span class="menu-category">Brownies</span>
+                            <span class="menu-category" data-translate="Brownies">Brownies</span>
                             <div class="menu-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -128,10 +128,10 @@
                         </div>
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-name">Traditional Pastry</h3>
-                        <p class="menu-desc">Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.</p>
+                        <h3 class="menu-name" data-translate="Traditional Pastry">Traditional Pastry</h3>
+                        <p class="menu-desc" data-translate="Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.">Authentic Indonesian pastry with crispy exterior and soft interior. Made with traditional recipes passed down through generations.</p>
                         <div class="menu-details">
-                            <span class="menu-category">Pastry</span>
+                            <span class="menu-category" data-translate="Pastry">Pastry</span>
                             <div class="menu-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -153,10 +153,10 @@
                         </div>
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-name">Premium Cake</h3>
-                        <p class="menu-desc">Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.</p>
+                        <h3 class="menu-name" data-translate="Premium Cake">Premium Cake</h3>
+                        <p class="menu-desc" data-translate="Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.">Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.</p>
                         <div class="menu-details">
-                            <span class="menu-category">Cake</span>
+                            <span class="menu-category" data-translate="Cake">Cake</span>
                             <div class="menu-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -222,5 +222,16 @@
     </footer>
 
     <script src="js/slider.js"></script>
+    <script src="js/translation.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = btn.getAttribute('data-lang');
+        localStorage.setItem('monyenyo_lang', lang);
+      });
+    });
+  });
+</script>
 </body>
 </html>
