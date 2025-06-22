@@ -290,6 +290,82 @@
         </div>
     </section>
 
+    <!-- Blog Preview Section -->
+    <section class="blog-preview-section" id="blogs">
+        <div class="container">
+            <div class="blog-preview-header">
+                <span class="blog-preview-label" data-translate="OUR STORIES">OUR STORIES</span>
+                <h2 class="blog-preview-title" data-translate="LATEST FROM BLOG">LATEST FROM BLOG</h2>
+                <p class="blog-preview-description" data-translate="Discover the passion, tradition, and innovation behind every Monyenyo creation">Discover the passion, tradition, and innovation behind every Monyenyo creation</p>
+            </div>
+            
+            <div class="blog-preview-grid">
+                <!-- Featured Blog Post -->
+                <div class="featured-blog-post">
+                    <div class="featured-blog-image">
+                        <img src="images/about1.png" alt="Featured Article">
+                        <div class="featured-blog-badge">FEATURED</div>
+                    </div>
+                    <div class="featured-blog-content">
+                        <div class="featured-blog-meta">
+                            <span class="featured-blog-category" data-translate="Heritage">Heritage</span>
+                            <span class="featured-blog-date">December 15, 2024</span>
+                        </div>
+                        <h3 class="featured-blog-title" data-translate="The Art of Traditional Indonesian Brownies">The Art of Traditional Indonesian Brownies</h3>
+                        <p class="featured-blog-excerpt" data-translate="Journey through generations of baking traditions as we unveil the secrets behind our signature brownies">Journey through generations of baking traditions as we unveil the secrets behind our signature brownies</p>
+                        <div class="featured-blog-author">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Chef Maria Sari</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Blog Posts -->
+                <div class="recent-blog-posts">
+                    <div class="recent-blog-post">
+                        <div class="recent-blog-image">
+                            <img src="images/menu1.png" alt="Perfect Brownies">
+                            <div class="recent-blog-time">5 min read</div>
+                        </div>
+                        <div class="recent-blog-content">
+                            <span class="recent-blog-category" data-translate="Recipes">Recipes</span>
+                            <h4 class="recent-blog-title" data-translate="Secrets to Perfect Brownies">Secrets to Perfect Brownies</h4>
+                            <span class="recent-blog-date">Dec 12, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="recent-blog-post">
+                        <div class="recent-blog-image">
+                            <img src="images/menu2.png" alt="Behind the Scenes">
+                            <div class="recent-blog-time">3 min read</div>
+                        </div>
+                        <div class="recent-blog-content">
+                            <span class="recent-blog-category" data-translate="Behind Scenes">Behind Scenes</span>
+                            <h4 class="recent-blog-title" data-translate="Morning at Monyenyo Kitchen">Morning at Monyenyo Kitchen</h4>
+                            <span class="recent-blog-date">Dec 10, 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="recent-blog-post">
+                        <div class="recent-blog-image">
+                            <img src="images/menu3.png" alt="Spice Story">
+                            <div class="recent-blog-time">4 min read</div>
+                        </div>
+                        <div class="recent-blog-content">
+                            <span class="recent-blog-category" data-translate="Heritage">Heritage</span>
+                            <h4 class="recent-blog-title" data-translate="Indonesia's Spice Heritage">Indonesia's Spice Heritage</h4>
+                            <span class="recent-blog-date">Dec 8, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-preview-cta">
+                <a href="blogs.html" class="blog-preview-btn" data-translate="View All Stories">View All Stories</a>
+            </div>
+        </div>
+    </section>
+
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">        <a href="https://wa.me/6282295029308" target="_blank">
             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386'/%3E%3C/svg%3E" alt="WhatsApp">
@@ -345,7 +421,22 @@
           btn.addEventListener('click', function() {
             var lang = btn.getAttribute('data-lang');
             localStorage.setItem('monyenyo_lang', lang);
-          });
+          });        });
+      });
+
+      // Smooth scroll for internal blog link
+      document.querySelectorAll('a[href="#blogs"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.getElementById('blogs');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobileMenuOverlay');
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+              mobileMenu.classList.remove('active');
+            }
+          }
         });
       });
     </script>
