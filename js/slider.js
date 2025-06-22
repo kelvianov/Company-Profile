@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('desktop-transparent', 'desktop-solid');
             const isAbout = window.location.pathname.includes('about.html');
             const isMenu = window.location.pathname.includes('menu.html');
-            if (isAbout || isMenu) {
+            const isBlogs = window.location.pathname.includes('blogs.html');
+            if (isAbout || isMenu || isBlogs) {
                 header.classList.add('desktop-solid');
             } else {
                 if (scrollY > 100) {
