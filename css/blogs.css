@@ -53,20 +53,23 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 200px; /* Move hero text closer to navbar */
+    padding-bottom: 80px; /* Add bottom padding to create space */
 }
 
 .hero-description {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     margin-top: 24px;
     font-weight: 400;
 }
 
 /* Featured Article Section */
 .featured-article {
-    padding: 100px 0;
+    padding: 100px 0; /* Increase padding for more space */
     background: #fafafa;
+    margin-top: 60px; /* Add top margin for more separation */
 }
 
 .featured-content {
