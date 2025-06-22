@@ -13,6 +13,20 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Desktop zoom 90% - Mobile tidak terpengaruh */
+@media (min-width: 769px) {
+    html {
+        zoom: 90%;
+    }
+    
+    /* Fix hero background untuk zoom 90% - tanpa fixed attachment */
+    .hero {
+        background-size: cover !important;
+        background-position: center top !important;
+        min-height: 111vh !important; /* Kompensasi zoom dengan tinggi lebih besar */
+    }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
