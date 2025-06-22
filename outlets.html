@@ -107,104 +107,7 @@
                         <a href="https://wa.me/6281280080275?text=Hello%2C%20I%27d%20like%20to%20visit%20Monyenyo%20store" target="_blank" class="btn-secondary">Contact Us</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">About Our Store</div>
-                    <h2 class="section-title">Premium Brownie Experience</h2>
-                    <p class="section-description">Our flagship store in Bandung represents the perfect blend of traditional Indonesian flavors and modern culinary excellence</p>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Modern Bakery with Traditional Values</h3>
-                        <p>Located strategically in Bandung, our store offers more than just premium brownies. We provide a complete culinary experience where traditional Indonesian recipes meet contemporary presentation and service excellence.</p>
-                        
-                        <p>Our team of skilled bakers works daily to ensure every brownie meets our highest quality standards, using only the finest locally-sourced ingredients and time-tested recipes passed down through generations.</p>
-                        
-                        <div class="about-stats">
-                            <div class="stat-box">
-                                <div class="stat-number">5+</div>
-                                <div class="stat-label">Years of Excellence</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-number">2000+</div>
-                                <div class="stat-label">Happy Customers</div>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Monyenyo Store Interior">
-                        <div class="status-overlay" id="storeStatus">Open Now</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">Our Services</div>
-                    <h2 class="section-title">Complete Bakery Solutions</h2>
-                    <p class="section-description">We offer comprehensive services to meet all your brownie and dessert needs</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-store"></i>
-                        </div>
-                        <h3>Retail Store</h3>
-                        <p>Browse our full range of premium brownies, cakes, and desserts in our comfortable retail space with modern interior design</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shopping-bag"></i>
-                        </div>
-                        <h3>Takeaway & Delivery</h3>
-                        <p>Quick service for busy customers with professional packaging that maintains freshness and quality during transport</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-birthday-cake"></i>
-                        </div>
-                        <h3>Custom Orders</h3>
-                        <p>Personalized brownies and cakes for special occasions, corporate events, weddings, and celebrations with custom designs</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h3>Dine-In Experience</h3>
-                        <p>Comfortable seating area with free WiFi, perfect for enjoying our fresh brownies with premium coffee and beverages</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Corporate Catering</h3>
-                        <p>Professional catering services for corporate meetings, seminars, and business events with flexible packages</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
-                        <h3>Gift Packaging</h3>
-                        <p>Premium gift boxes and hampers perfect for corporate gifts, holidays, and special occasions with elegant presentation</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </div>        </section>
 
         <!-- Location Section -->
         <section id="location" class="location-section">
@@ -397,42 +300,8 @@
                        style="background: #8B4513; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 12px;">
                        Get Directions
                     </a>
-                </div>
-            `).openPopup();
-            
-            // Check store status
-            checkStoreStatus();
-        });        // Check if store is open
-        function checkStoreStatus() {
-            const now = new Date();
-            const currentHour = now.getHours();
-            const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-            
-            let isOpen = false;
-            
-            // Monday to Friday: 9:00 - 21:00
-            if (currentDay >= 1 && currentDay <= 5) {
-                isOpen = currentHour >= 9 && currentHour < 21;
-            }
-            // Saturday: 8:00 - 22:00
-            else if (currentDay === 6) {
-                isOpen = currentHour >= 8 && currentHour < 22;
-            }
-            // Sunday: 9:00 - 21:00
-            else if (currentDay === 0) {
-                isOpen = currentHour >= 9 && currentHour < 21;
-            }
-            
-            const statusElement = document.getElementById('storeStatus');
-            
-            if (isOpen) {
-                statusElement.textContent = 'Open Now';
-                statusElement.className = 'status-overlay';
-            } else {
-                statusElement.textContent = 'Closed';
-                statusElement.className = 'status-overlay closed';
-            }
-        }
+                </div>            `).openPopup();
+        });
     </script>
 </body>
 </html>
