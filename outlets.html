@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Outlet - Monyenyo</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon_large.ico" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/outlets.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header desktop-solid">
+        <div class="container">
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link" data-translate="HOME" data-no-translate="1">HOME</a>
+                <a href="about.html" class="nav-link" data-translate="ABOUT" data-no-translate="1">ABOUT</a>
+                <a href="menu.html" class="nav-link" data-translate="MENU" data-no-translate="1">MENU</a>
+            </nav>
+
+            <!-- Logo -->
+            <div class="nav-logo">
+                <span class="logo-text">MoNyeNyo</span>
+            </div>
+
+            <!-- Right Navigation -->
+            <nav class="nav-menu-right">
+                <a href="blogs.html" class="nav-link" data-translate="BLOGS" data-no-translate="1">BLOGS</a>
+                <a href="outlets.html" class="nav-link active" data-translate="OUTLETS" data-no-translate="1">OUTLETS</a>
+                <a href="contact.html" class="nav-link" data-translate="CONTACT" data-no-translate="1">CONTACT</a>
+            </nav>
+
+            <!-- Language Toggle -->
+            <div class="language-toggle" style="cursor:pointer;">
+                <span class="lang-btn active" data-lang="en" style="cursor:pointer;">EN</span>
+                <span class="lang-separator">|</span>
+                <span class="lang-btn" data-lang="id" style="cursor:pointer;">ID</span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <span class="mobile-logo">Monyenyo</span>
+                    <button class="close-menu" id="closeMenu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link" data-no-translate="1">HOME</a>
+                    <a href="about.html" class="mobile-nav-link" data-no-translate="1">ABOUT</a>
+                    <a href="menu.html" class="mobile-nav-link" data-no-translate="1">MENU</a>
+                    <a href="blogs.html" class="mobile-nav-link" data-no-translate="1">BLOGS</a>
+                    <a href="outlets.html" class="mobile-nav-link active" data-no-translate="1">OUTLETS</a>
+                    <a href="contact.html" class="mobile-nav-link" data-no-translate="1">CONTACT</a>
+                </nav>
+                <div class="mobile-contact">
+                    <a href="tel:+6281280080275">
+                        <i class="fas fa-phone"></i>
+                        +62 8128 008 0275
+                    </a>
+                </div>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>    <!-- Main Content -->
+    <main class="outlets-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">Our Store Location</div>
+                    <h1 class="hero-title">Visit Monyenyo Bandung</h1>
+                    <p class="hero-subtitle">Experience authentic Indonesian brownies in our modern flagship store located in the heart of Bandung</p>
+                    <div class="hero-cta">
+                        <a href="#location" class="btn-primary">Find Our Location</a>
+                        <a href="https://wa.me/6281280080275?text=Hello%2C%20I%27d%20like%20to%20visit%20Monyenyo%20store" target="_blank" class="btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">About Our Store</div>
+                    <h2 class="section-title">Premium Brownie Experience</h2>
+                    <p class="section-description">Our flagship store in Bandung represents the perfect blend of traditional Indonesian flavors and modern culinary excellence</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Modern Bakery with Traditional Values</h3>
+                        <p>Located strategically in Bandung, our store offers more than just premium brownies. We provide a complete culinary experience where traditional Indonesian recipes meet contemporary presentation and service excellence.</p>
+                        
+                        <p>Our team of skilled bakers works daily to ensure every brownie meets our highest quality standards, using only the finest locally-sourced ingredients and time-tested recipes passed down through generations.</p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-box">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Years of Excellence</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">2000+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Monyenyo Store Interior">
+                        <div class="status-overlay" id="storeStatus">Open Now</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Our Services</div>
+                    <h2 class="section-title">Complete Bakery Solutions</h2>
+                    <p class="section-description">We offer comprehensive services to meet all your brownie and dessert needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Retail Store</h3>
+                        <p>Browse our full range of premium brownies, cakes, and desserts in our comfortable retail space with modern interior design</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h3>Takeaway & Delivery</h3>
+                        <p>Quick service for busy customers with professional packaging that maintains freshness and quality during transport</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3>Custom Orders</h3>
+                        <p>Personalized brownies and cakes for special occasions, corporate events, weddings, and celebrations with custom designs</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Dine-In Experience</h3>
+                        <p>Comfortable seating area with free WiFi, perfect for enjoying our fresh brownies with premium coffee and beverages</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Corporate Catering</h3>
+                        <p>Professional catering services for corporate meetings, seminars, and business events with flexible packages</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Gift Packaging</h3>
+                        <p>Premium gift boxes and hampers perfect for corporate gifts, holidays, and special occasions with elegant presentation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Visit Us</div>
+                    <h2 class="section-title">Store Location & Information</h2>
+                    <p class="section-description">Conveniently located in Bandung with easy access and ample parking facilities</p>
+                </div>
+                
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Store Details</h3>
+                        
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h4>Address</h4>
+                                    <p>Jl. Terusan Gatot Subroto No.302<br>
+                                       Kb. Kangkung, Kec. Kiaracondong<br>
+                                       Kota Bandung, Jawa Barat 40284</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h4>Phone & WhatsApp</h4>
+                                    <p>+62 8128 008 0275<br>
+                                       Available for orders and inquiries</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h4>Operating Hours</h4>
+                                    <div class="hours-list">
+                                        <div class="hours-item">
+                                            <span>Monday - Friday</span>
+                                            <span>09:00 - 21:00</span>
+                                        </div>
+                                        <div class="hours-item">
+                                            <span>Saturday</span>
+                                            <span>08:00 - 22:00</span>
+                                        </div>
+                                        <div class="hours-item">
+                                            <span>Sunday</span>
+                                            <span>09:00 - 21:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div id="storeMap" class="store-map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Get In Touch</div>
+                    <h2 class="section-title">Ready to Visit Us?</h2>
+                    <p class="section-description">Contact us for more information, place orders, or plan your visit to our Bandung store</p>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="tel:+6281280080275" class="contact-btn primary">
+                        <i class="fas fa-phone"></i>
+                        Call Us Now
+                    </a>
+                    <a href="https://wa.me/6281280080275?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20Monyenyo%20store" target="_blank" class="contact-btn secondary">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="https://maps.google.com/?q=Jl.+Terusan+Gatot+Subroto+No.302+Bandung" target="_blank" class="contact-btn primary">
+                        <i class="fas fa-directions"></i>
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main><!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/6281280080275" target="_blank">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386'/%3E%3C/svg%3E" alt="WhatsApp">
+        </a>
+    </div><!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo & Description -->
+                <div class="footer-main">
+                    <div class="logo-section">
+                        <span class="logo-text">Monyenyo</span>
+                    </div>
+                    <p class="footer-desc">
+                        Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.
+                    </p>
+                </div>
+                
+                <!-- Contact -->                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <span>Jl. Indonesia Raya, Sudirman, Jakarta Selatan, DKI Jakarta, Indonesia, 10150</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@monyenyo.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 8128 008 0275</span>
+                    </div>
+                </div>
+                
+                <!-- Social -->
+                <div class="footer-social">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2024 Monyenyo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translation.js"></script>
+    <script>
+        // Mobile menu functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+            hamburgerMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        });
+
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) {
+                mobileMenuOverlay.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            }
+        });        // Initialize map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Map for Bandung location - exact coordinates for Gatot Subroto
+            const map = L.map('storeMap').setView([-6.9306, 107.6191], 15);
+            
+            // OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            // Add marker for Monyenyo store
+            const marker = L.marker([-6.9306, 107.6191]).addTo(map);
+            marker.bindPopup(`
+                <div style="text-align: center; padding: 10px;">
+                    <h3 style="margin: 0 0 8px 0; color: #8B4513;">Monyenyo Bandung</h3>
+                    <p style="margin: 0 0 8px 0; font-size: 13px;">Jl. Terusan Gatot Subroto No.302</p>
+                    <p style="margin: 0 0 10px 0; font-size: 13px;">Bandung, Jawa Barat</p>
+                    <a href="https://maps.google.com/?q=Jl.+Terusan+Gatot+Subroto+No.302+Bandung" target="_blank" 
+                       style="background: #8B4513; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 12px;">
+                       Get Directions
+                    </a>
+                </div>
+            `).openPopup();
+            
+            // Check store status
+            checkStoreStatus();
+        });        // Check if store is open
+        function checkStoreStatus() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+            
+            let isOpen = false;
+            
+            // Monday to Friday: 9:00 - 21:00
+            if (currentDay >= 1 && currentDay <= 5) {
+                isOpen = currentHour >= 9 && currentHour < 21;
+            }
+            // Saturday: 8:00 - 22:00
+            else if (currentDay === 6) {
+                isOpen = currentHour >= 8 && currentHour < 22;
+            }
+            // Sunday: 9:00 - 21:00
+            else if (currentDay === 0) {
+                isOpen = currentHour >= 9 && currentHour < 21;
+            }
+            
+            const statusElement = document.getElementById('storeStatus');
+            
+            if (isOpen) {
+                statusElement.textContent = 'Open Now';
+                statusElement.className = 'status-overlay';
+            } else {
+                statusElement.textContent = 'Closed';
+                statusElement.className = 'status-overlay closed';
+            }
+        }
+    </script>
+</body>
+</html>
