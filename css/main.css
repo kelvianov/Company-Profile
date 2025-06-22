@@ -15,6 +15,18 @@ body {
     color: #333;
 }
 
+.header.desktop-solid .lang-btn {
+    color: #2c2c2c !important;
+}
+
+.header.desktop-solid .lang-btn.active {
+    color: #8B5C2A !important;
+}
+
+.header.desktop-solid .lang-separator {
+    color: #2c2c2c !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
