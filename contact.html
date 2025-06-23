@@ -87,7 +87,7 @@
         <section class="contact-section">
             <div class="container contact-flex">
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" autocomplete="off" action="https://formspree.io/f/mblyzzkq" method="POST">
+                    <form class="contact-form" autocomplete="off">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -102,6 +102,12 @@
                         </div>
                         <button type="submit" class="btn-primary">Send Message</button>
                     </form>
+                    <!-- Notifikasi sukses di kanan atas, lebih turun dan ke kanan -->
+<div class="contact-toast-success" style="display:none; opacity:0; position:fixed; top:100px; right:100px; z-index:9999; min-width:220px; max-width:90vw; background:#f0fdf4; color:#2c7a4b; border-radius:12px; box-shadow:0 4px 24px 0 rgba(44,122,75,0.13); padding:18px 28px 18px 20px; font-size:1rem; font-weight:600; display:flex; align-items:center; gap:14px; transition:opacity 0.3s;">
+    <span style="font-size:1.7rem; color:#2c7a4b;"><i class="fa-solid fa-circle-check"></i></span>
+    <span style="font-size:1.08rem; font-weight:700;">Message sent</span>
+    <button class="toast-close-btn" style="background:none; border:none; color:#2c7a4b; font-size:1.2rem; margin-left:auto; cursor:pointer; padding:0 0 0 10px;" aria-label="Close notification">&times;</button>
+</div>
                 </div>
               
                     
@@ -170,6 +176,56 @@
                 hamburgerMenu.classList.remove('active');
             }
         });
+
+        // AJAX Formspree submit
+        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            try {
+                const response = await fetch('https://formspree.io/f/mblyzzkq', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    // form.style.display = 'none'; // Hapus baris ini agar form tidak hilang
+                    // Tampilkan notifikasi toast kanan atas SETELAH submit sukses
+                    const toast = document.querySelector('.contact-toast-success');
+                    setTimeout(() => {
+                        toast.style.display = 'flex';
+                        toast.style.opacity = '1';
+                        setTimeout(() => {
+                            toast.style.opacity = '0';
+                            setTimeout(() => { toast.style.display = 'none'; }, 400);
+                        }, 3000);
+                    }, 200);
+                    // Reset form setelah submit sukses
+                    form.reset();
+                } else {
+                    alert('Sorry, there was a problem sending your message. Please try again later.');
+                }
+            } catch (err) {
+                alert('Sorry, there was a problem sending your message. Please try again later.');
+            }
+            submitBtn.disabled = false;
+        });
+        // Tombol close pada toast
+        document.querySelector('.toast-close-btn').addEventListener('click', function() {
+            const toast = document.querySelector('.contact-toast-success');
+            toast.style.opacity = '0';
+            setTimeout(() => { toast.style.display = 'none'; }, 400);
+        });
+        // Pastikan toast selalu hidden saat halaman load
+        window.addEventListener('DOMContentLoaded', function() {
+    const toast = document.querySelector('.contact-toast-success');
+    if (toast) {
+        toast.style.display = 'none';
+        toast.style.opacity = '0';
+    }
+});
     </script>
 </body>
 </html>
