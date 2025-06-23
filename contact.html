@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Monyenyo</title>
+    <link rel="icon" href="images/favicon_large.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header desktop-solid">
+        <div class="container">
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="menu.html" class="nav-link">MENU</a>
+            </nav>
+            <div class="nav-logo">
+                <span class="logo-text">MoNyeNyo</span>
+            </div>
+            <nav class="nav-menu-right">
+                <a href="blogs.html" class="nav-link">BLOGS</a>
+                <a href="outlets.html" class="nav-link">OUTLETS</a>
+                <a href="contact.html" class="nav-link active">CONTACT</a>
+            </nav>
+            <div class="language-toggle" style="cursor:pointer;">
+                <span class="lang-btn active" data-lang="en">EN</span>
+                <span class="lang-separator">|</span>
+                <span class="lang-btn" data-lang="id">ID</span>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <span class="mobile-logo">Monyenyo</span>
+                    <button class="close-menu" id="closeMenu">&times;</button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link">HOME</a>
+                    <a href="about.html" class="mobile-nav-link">ABOUT</a>
+                    <a href="menu.html" class="mobile-nav-link">MENU</a>
+                    <a href="blogs.html" class="mobile-nav-link">BLOGS</a>
+                    <a href="outlets.html" class="mobile-nav-link">OUTLETS</a>
+                    <a href="contact.html" class="mobile-nav-link active">CONTACT</a>
+                </nav>
+                <div class="mobile-contact">
+                    <a href="tel:+6281280080275">
+                        <i class="fas fa-phone"></i>
+                        +62 8128 008 0275
+                    </a>
+                </div>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="contact-main">
+        <!-- Hero Section -->
+        <section class="contact-hero-section">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1 class="contact-hero-title">Contact Us</h1>
+                    <p class="contact-hero-subtitle">We'd love to hear from you. Reach out for any questions, feedback, or collaboration opportunities.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form & Info -->
+        <section class="contact-section">
+            <div class="container contact-flex">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="you@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Type your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+              
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="logo-section">
+                        <span class="logo-text">Monyenyo</span>
+                    </div>
+                    <p class="footer-desc">
+                        Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <span>Jl. Indonesia Raya, Sudirman, Jakarta Selatan, DKI Jakarta, Indonesia, 10150</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@monyenyo.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 8128 008 0275</span>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Monyenyo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/translation.js"></script>
+    <script>
+        // Mobile menu functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+            hamburgerMenu.classList.add('active');
+        });
+        closeMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        });
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) {
+                mobileMenuOverlay.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            }
+        });
+        // Simple form handler (no backend)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
