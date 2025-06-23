@@ -15,6 +15,7 @@
 - Implement responsive design for optimal viewing across all devices
 - Develop an engaging hero section with automated image slider
 - Establish a professional online presence with clean code architecture
+- Provide complete, up-to-date contact and outlet information
 
 ## ✨ Key Features
 
@@ -25,7 +26,7 @@
 - **No Loading Delays**: Instant visibility of all components
 
 ### 🧭 **Professional Navigation**
-- **Fixed Header**: Persistent navigation with transparent background
+- **Fixed Header**: Persistent navigation with solid white background (not transparent)
 - **Social Media Integration**: Direct links to Instagram, TikTok, and YouTube
 - **Contact Information**: Prominently displayed phone number
 - **Clean Typography**: Modern Inter font family throughout
@@ -40,21 +41,36 @@
 - **Complete Contact Info**: Full address, email, and phone details
 - **Professional Footer**: Clean, organized company information
 
+### 🏪 **Outlet Information**
+- **Dedicated Outlets Page**: All store locations and contact details
+- **Consistent Branding**: Outlet info matches main site style
+
 ## 🛠️ Technical Implementation
 
 ### **Architecture**
 ```
 monyenyo/
 ├── index.html              # Main HTML structure
+├── about.html              # About page
+├── menu.html               # Menu page
+├── blogs.html              # Blog page
+├── outlets.html            # Outlets/locations page
+├── contact.html            # Contact page
 ├── css/
-│   └── main.css           # Comprehensive styling
+│   ├── main.css            # Global styling
+│   ├── about.css           # About page styling
+│   ├── blogs.css           # Blog page styling
+│   ├── menu.css            # Menu page styling
+│   ├── outlets.css         # Outlets page styling
+│   ├── contact.css         # Contact page styling
+│   ├── header.css          # Header/navbar styling
+│   ├── footer.css          # Footer styling
+│   └── wa-float.css        # WhatsApp button styling
 ├── js/
-│   └── slider.js          # Hero slider functionality
-├── images/
-│   ├── deskrop1.jpg       # Hero slide 1
-│   ├── desktop2.jpg       # Hero slide 2
-│   └── desktop3.jpg       # Hero slide 3
-└── README.md              # Project documentation
+│   ├── slider.js           # Hero slider functionality
+│   └── translation.js      # Language toggle functionality
+├── images/                 # All images and icons
+└── README.md               # Project documentation
 ```
 
 ### **Technologies Used**
@@ -63,7 +79,7 @@ monyenyo/
 |------------|---------|---------|
 | **HTML5** | Semantic markup and structure | Latest |
 | **CSS3** | Modern styling and responsive design | Latest |
-| **JavaScript (ES6+)** | Interactive slider functionality | Latest |
+| **JavaScript (ES6+)** | Interactive slider & language toggle | Latest |
 | **Font Awesome** | Professional iconography | 6.4.0 |
 | **Google Fonts** | Typography (Inter font family) | Latest |
 
@@ -132,16 +148,19 @@ monyenyo/
 - **Semantic HTML5**: Proper use of header, main, section, footer elements
 - **SEO Optimized**: Meta tags, proper heading hierarchy
 - **Accessibility**: ARIA labels and semantic markup
+- **Consistent Navbar**: Solid white background, always visible
+- **Section Spacing**: Proportional margin and padding between sections
 
 ### **CSS Organization**
-- **Modular Styling**: Organized by components
+- **Modular Styling**: Organized by components and pages
 - **Mobile-First**: Responsive breakpoints at 480px, 768px, 1024px
 - **Modern Techniques**: Flexbox, Grid, CSS Custom Properties
 
 ### **JavaScript Features**
 - **Vanilla JS**: No external dependencies
 - **Performance Optimized**: Lightweight and efficient
-- **Event-Driven**: Clean event handling for slider functionality
+- **Event-Driven**: Clean event handling for slider and language toggle
+- **Translation Support**: Multi-language toggle (EN/ID)
 
 ## 🎯 Performance Metrics
 
@@ -155,9 +174,10 @@ monyenyo/
 
 ### **Updating Content**
 1. **Hero Images**: Replace files in `/images/` directory
-2. **Contact Information**: Update footer section in `index.html`
-3. **Social Links**: Modify href attributes in navigation
+2. **Contact Information**: Update footer section in all HTML files
+3. **Social Links**: Modify href attributes in navigation and footer
 4. **Brand Colors**: Update CSS custom properties in `main.css`
+5. **Outlet Info**: Edit `outlets.html` for store locations
 
 ### **Slider Configuration**
 ```javascript
@@ -168,16 +188,21 @@ const slides = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Update images
 
 ## 📞 Contact Information
 
-**Company**: Webekspor  
+**Company**: Monyenyo
+
 **Address**: Jl. Indonesia Raya, Sudirman, Jakarta Selatan, DKI Jakarta, Indonesia, 10150  
-**Email**: mail@example.com  
-**Phone**: +991-0123456789  
+**Email**: hello@monyenyo.com  
+**Phone**: +62 822-9502-9308  
 
 **Social Media**:
-- Facebook: [Link]
-- Instagram: [Link]  
-- YouTube: [Link]
-- TikTok: [Link]
+- [Instagram](#)
+- [YouTube](#)
+- [TikTok](#)
+- [Facebook](#)
+
+## 🏪 Outlet Locations
+
+Lihat halaman [outlets.html](outlets.html) untuk daftar outlet dan kontak cabang terbaru.
 
 ## 📄 License
 
