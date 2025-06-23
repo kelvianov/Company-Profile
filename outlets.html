@@ -117,11 +117,8 @@
                     <h2 class="section-title">Store Location & Information</h2>
                     <p class="section-description">Conveniently located in Bandung with easy access and ample parking facilities</p>
                 </div>
-                
-                <div class="location-content">
+                  <div class="location-content">
                     <div class="location-info">
-                        <h3>Store Details</h3>
-                        
                         <div class="location-details">
                             <div class="detail-item">
                                 <div class="detail-icon">
@@ -132,17 +129,6 @@
                                     <p>Jl. Terusan Gatot Subroto No.302<br>
                                        Kb. Kangkung, Kec. Kiaracondong<br>
                                        Kota Bandung, Jawa Barat 40284</p>
-                                </div>
-                            </div>
-                            
-                            <div class="detail-item">
-                                <div class="detail-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="detail-content">
-                                    <h4>Phone & WhatsApp</h4>
-                                    <p>+62 8128 008 0275<br>
-                                       Available for orders and inquiries</p>
                                 </div>
                             </div>
                             
@@ -281,8 +267,8 @@
             }
         });        // Initialize map
         document.addEventListener('DOMContentLoaded', function() {
-            // Map for Bandung location - exact coordinates for Gatot Subroto
-            const map = L.map('storeMap').setView([-6.9306, 107.6191], 15);
+            // Map for Bandung location - exact coordinates for Jl. Terusan Gatot Subroto No.302
+            const map = L.map('storeMap').setView([-6.932075382191005, 107.64359309615627], 17);
             
             // OpenStreetMap tiles
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -290,7 +276,7 @@
             }).addTo(map);
             
             // Add marker for Monyenyo store
-            const marker = L.marker([-6.9306, 107.6191]).addTo(map);
+            const marker = L.marker([-6.932075382191005, 107.64359309615627]).addTo(map);
             marker.bindPopup(`
                 <div style="text-align: center; padding: 10px;">
                     <h3 style="margin: 0 0 8px 0; color: #8B4513;">Monyenyo Bandung</h3>
