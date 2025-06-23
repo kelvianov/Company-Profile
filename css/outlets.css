@@ -591,6 +591,11 @@
     transform: translateY(-3px);
 }
 
+/* Hide Leaflet watermark/attribution */
+.leaflet-control-attribution {
+    display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
@@ -726,4 +731,5 @@
         gap: 8px;
         text-align: center;
         padding: 15px 0;
-    }}
+    }
+}
