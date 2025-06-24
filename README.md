@@ -11,6 +11,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)
 
+**Live Website:** [https://company-profile-sandy.vercel.app/](https://company-profile-sandy.vercel.app/)
+
+
 
 ## 📋 Project Overview
 
