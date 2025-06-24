@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="docs/personal-logo.png" width="200" alt="KosKu Logo" />
+</p>
+
+
 # Monyenyo - Indonesia's Best Brownies Pastry
 
 ![Monyenyo Logo](https://img.shields.io/badge/Monyenyo-Premium%20Brownies-8B4513?style=for-the-badge)
