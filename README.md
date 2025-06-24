@@ -3,9 +3,9 @@
 </p>
 
 
-# Monyenyo - Indonesia's Best Brownies Pastry
+# Comapany Profile - Indonesia's Best Brownies Pastry
 
-![Monyenyo Logo](https://img.shields.io/badge/Monyenyo-Premium%20Brownies-8B4513?style=for-the-badge)
+![Monyenyo Logo](https://img.shields.io/badge/Monyenyo-Company%20Profile%20Brownies-8B4513?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -211,7 +211,7 @@ Lihat halaman [outlets.html](outlets.html) untuk daftar outlet dan kontak cabang
 
 ## 📄 License
 
-This project is proprietary software developed for Monyenyo. All rights reserved.
+This project is proprietary software developed for Kelvianov. All rights reserved.
 
 ---
 
