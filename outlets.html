@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
-<body>
+<body class="outlets-page">
     <!-- Header -->
     <header class="header desktop-solid">
         <div class="container">
@@ -190,7 +190,8 @@
                 mobileMenuOverlay.classList.remove('active');
                 hamburgerMenu.classList.remove('active');
             }
-        });        // Initialize map
+        });
+        // Initialize map
         document.addEventListener('DOMContentLoaded', function() {
             // Map for Bandung location - exact coordinates for Jl. Terusan Gatot Subroto No.302
             const map = L.map('storeMap').setView([-6.932075382191005, 107.64359309615627], 17);
@@ -214,5 +215,27 @@
                 </div>            `).openPopup();
         });
     </script>
+    <script>
+// Navbar only at very top (mobile only)
+(function() {
+  var header = document.querySelector('.header');
+  function updateNavbar() {
+    var scrollY = window.scrollY;
+    var isMobile = window.innerWidth <= 900;
+    if (isMobile) {
+      if (scrollY <= 10) {
+        header.style.display = '';
+      } else {
+        header.style.display = 'none';
+      }
+    } else {
+      header.style.display = '';
+    }
+  }
+  window.addEventListener('scroll', updateNavbar);
+  window.addEventListener('resize', updateNavbar);
+  updateNavbar();
+})();
+</script>
 </body>
 </html>
