@@ -734,3 +734,30 @@
         padding: 15px 0;
     }
 }
+
+@media (max-width: 900px) {
+  .header.desktop-solid {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .header.desktop-solid .nav-link,
+  .header.desktop-solid .nav-link.active,
+  .header.desktop-solid .logo-text,
+  .header.desktop-solid .social-link,
+  .header.desktop-solid .social-link:hover,
+  .header.desktop-solid .lang-btn,
+  .header.desktop-solid .lang-btn.active,
+  .header.desktop-solid .lang-separator {
+    color: white !important;
+  }
+  .header.desktop-solid .hamburger-menu span {
+    background: white !important;
+  }
+  .outlets-main {
+    padding-top: 0 !important;
+  }
+  .hero-section {
+    padding-top: 100px !important;
+    margin-top: 0 !important;
+  }
+}
