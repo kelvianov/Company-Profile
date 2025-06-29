@@ -8,7 +8,8 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Design-29B6F6?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 
 **The official website for Monyenyo: Modern Indonesian brownies, menu, outlets, blog, and contact.**
 
@@ -48,29 +49,47 @@ This project is a multi-page, fully responsive company profile and landing page 
 ## 📁 Project Structure
 
 ```
-index.html
-about.html
-menu.html
-blogs.html
-outlets.html
-contact.html
-css/
-  main.css
-  header.css
-  footer.css
-  about.css
-  menu.css
-  blogs.css
-  outlets.css
-  contact.css
-js/
-  slider.js
-  translation.js
-images/
-docs/
+MONYENYO/
+│
+├── index.html
+├── about.html
+├── menu.html
+├── blogs.html
+├── outlets.html
+├── contact.html
+│
+├── css/
+│   ├── main.css
+│   ├── header.css
+│   ├── footer.css
+│   ├── about.css
+│   ├── menu.css
+│   ├── blogs.css
+│   ├── outlets.css
+│   └── contact.css
+│
+├── js/
+│   ├── slider.js
+│   └── translation.js
+│
+├── images/
+│   └── ... (all image assets)
+│
+├── docs/
+│   └── personal-logo.png
+│
+└── README.md
 ```
+- **html files**: Main pages for each section of the website.
+- **css/**: Modular CSS files for each page and shared components.
+- **js/**: JavaScript for interactivity (slider, translation, etc).
+- **images/**: All image assets (logo, hero, product, etc).
+- **docs/**: Documentation assets (logo for README, etc).
+- **README.md**: Project documentation.
 
 ---
+
+You can copy and replace your current Project Structure section with the above for a more
 
 ## 🚀 Getting Started
 
@@ -86,11 +105,12 @@ docs/
 
 ## 👤 Contributors
 
-- [Your Name] (replace with your name)
+- [Kelvianov Putra Kesuma] 
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
+
 
 ---
 
