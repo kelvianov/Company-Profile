@@ -246,6 +246,7 @@ body {
     }
     .contact-hero-section {
         padding: 64px 0 36px 0;
+        padding-top: 110px !important;
         min-height: 180px;
     }
     .contact-hero-content {
