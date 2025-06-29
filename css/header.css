@@ -132,6 +132,10 @@
     border-radius: 2px;
 }
 
+.hamburger-menu.active {
+  display: none !important;
+}
+
 .hamburger-menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
