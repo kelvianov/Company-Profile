@@ -181,17 +181,20 @@
         hamburgerMenu.addEventListener('click', () => {
             mobileMenuOverlay.classList.add('active');
             hamburgerMenu.classList.add('active');
+            document.body.classList.add('no-scroll');
         });
 
         closeMenu.addEventListener('click', () => {
             mobileMenuOverlay.classList.remove('active');
             hamburgerMenu.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
 
         mobileMenuOverlay.addEventListener('click', (e) => {
             if (e.target === mobileMenuOverlay) {
                 mobileMenuOverlay.classList.remove('active');
                 hamburgerMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
             }
         });
         // Initialize map
