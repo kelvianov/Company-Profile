@@ -418,5 +418,59 @@
         });
       });
     </script>
+    <style>
+      .mobile-menu-overlay { display: none; }
+      .mobile-menu-overlay.active { display: block !important; }
+      .mobile-menu-overlay.active ~ .container .hamburger-menu,
+      .mobile-menu-overlay.active + .container .hamburger-menu,
+      .mobile-menu-overlay.active .hamburger-menu,
+      .mobile-menu-header .hamburger-menu,
+      body:has(.mobile-menu-overlay.active) .hamburger-menu {
+        display: none !important;
+      }
+    </style>
+    <script>
+      (function() {
+        var hamburger = document.getElementById('hamburgerMenu');
+        var overlay = document.getElementById('mobileMenuOverlay');
+        var closeBtn = document.getElementById('closeMenu');
+        var lastScrollPosition = 0;
+        if (!hamburger || !overlay || !closeBtn) return;
+        // Jika sudah ada event, jangan override
+        if (overlay.classList.contains('active')) return;
+        hamburger.addEventListener('click', function(e) {
+          e.preventDefault();
+          lastScrollPosition = window.scrollY;
+          overlay.classList.add('active');
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${lastScrollPosition}px`;
+          document.body.style.left = '0';
+          document.body.style.right = '0';
+          document.body.style.width = '100%';
+          document.body.style.overflow = 'hidden';
+        });
+        function closeMenu() {
+          overlay.classList.remove('active');
+          // Kembalikan posisi scroll dengan benar
+          const scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.left = '';
+          document.body.style.right = '';
+          document.body.style.width = '';
+          document.body.style.overflow = '';
+          window.scrollTo(0, scrollY);
+        }
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          closeMenu();
+        });
+        overlay.addEventListener('click', function(e) {
+          if (e.target === overlay) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
