@@ -1,94 +1,97 @@
 <p align="center">
-  <img src="docs/personal-logo.png" width="200" alt="KosKu Logo" />
+  <img src="docs/personal-logo.png" width="200" alt="Monyenyo Logo" />
 </p>
 
-# Laravel Filament - Manajemen Transaksi & Kategori
+# Monyenyo Official Website
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Filament](https://img.shields.io/badge/Filament-3B82F6?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-Design-29B6F6?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**Aplikasi manajemen transaksi dan kategori berbasis Laravel + Filament Admin.**
+**The official website for Monyenyo: Modern Indonesian brownies, menu, outlets, blog, and contact.**
 
 ---
 
-## 📋 Ringkasan Proyek
+## 📋 Project Overview
 
-Aplikasi ini memudahkan pengelolaan data transaksi dan kategori secara efisien, dengan panel admin modern berbasis Filament. Mendukung autentikasi, CRUD, dan dashboard statistik.
+This project is a multi-page, fully responsive company profile and landing page for the Monyenyo brand. Built with pure HTML, CSS, and JavaScript (no backend framework), it showcases products, outlets, blog articles, and contact information in a modern, mobile-first design.
 
-### 🎯 Fitur Utama
-- CRUD Kategori & Transaksi
-- Dashboard Admin Filament
-- Autentikasi User
-- Migrasi & Seeder database
-- Responsive & mudah dikembangkan
+---
 
-## 🛠️ Struktur Proyek
+## ✨ Features & Highlights
+
+- **Modern & Responsive Design**  
+  Professional, mobile-first layout optimized for all devices (mobile, tablet, desktop).
+- **Multi-Page Website**  
+  Pages: Home, About, Menu, Blogs, Outlets, Contact.
+- **Hamburger Menu & Overlay**  
+  Mobile navigation with solid overlay, scroll lock, and consistent animation across all pages.
+- **Auto-Hide Navbar on Mobile**  
+  Navbar automatically hides on scroll down and only appears at the top (mobile only).
+- **Attractive Hero Sections**  
+  Each page features a strong headline and visual hero section.
+- **Blog & Articles**  
+  Simple blog system with category filters and modern article layouts.
+- **WhatsApp & Maps Integration**  
+  Floating WhatsApp button and outlet map (Leaflet.js).
+- **Modern Contact Form**  
+  AJAX contact form with validation and success notification.
+- **SEO & Accessibility Optimized**  
+  Semantic HTML, meta tags, and proper heading structure.
+- **No Backend Framework**  
+  Pure HTML, CSS, and JS. Easily deployable on any static hosting.
+
+---
+
+## 📁 Project Structure
+
 ```
-app/
-  Filament/
-    Pages/
-    Resources/
-    Widgets/
-  Http/
-    Controllers/
-  Models/
-    Category.php
-    Transaction.php
-    User.php
-config/
-database/
-  migrations/
-  seeders/
-public/
-resources/
-routes/
-storage/
-tests/
+index.html
+about.html
+menu.html
+blogs.html
+outlets.html
+contact.html
+css/
+  main.css
+  header.css
+  footer.css
+  about.css
+  menu.css
+  blogs.css
+  outlets.css
+  contact.css
+js/
+  slider.js
+  translation.js
+images/
+docs/
 ```
 
-## 🚀 Instalasi & Setup
+---
 
-1. **Clone repository**
+## 🚀 Getting Started
+
+1. **Clone the repository**
    ```bash
    git clone [repository-url]
-   cd Laravel-Filament
+   cd MONYENYO
    ```
-2. **Install dependency**
-   ```bash
-   composer install
-   npm install
-   ```
-3. **Copy file env & generate key**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-5. **Migrasi & seeder**
-   ```bash
-   php artisan migrate --seed
-   ```
-6. **Jalankan server lokal**
-   ```bash
-   php artisan serve
-   ```
-
-## 📁 File Penting
-- `app/Models/Category.php` & `Transaction.php` : Model utama
-- `app/Filament/Resources/` : Resource Filament (CRUD)
-- `routes/web.php` : Routing utama
-- `database/migrations/` : Struktur tabel
-
-## 👤 Kontributor
-- [Nama Anda] (ganti dengan nama Anda)
-
-## 📄 Lisensi
-
-Proyek ini menggunakan lisensi MIT.
+2. **Open `index.html` in your browser**  
+   No local server required, just open the file directly.
 
 ---
 
-**Built with ❤️ using Laravel & Filament**
+## 👤 Contributors
 
-*Last Updated: June 2025*
+- [Your Name] (replace with your name)
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+**Built with ❤️ for Monyenyo | Last Updated: June 2025**
