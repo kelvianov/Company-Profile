@@ -570,3 +570,15 @@
         height: 250px;
     }
 }
+
+@media (max-width: 900px) {
+  .about-hero {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    min-height: 0 !important;
+  }
+  .hero-text-center {
+    margin-top: 0 !important;
+    padding-bottom: 30px !important;
+  }
+}
