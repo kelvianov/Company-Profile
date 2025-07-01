@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Morning at Monyenyo Kitchen': 'Morning at Monyenyo Kitchen',            "Indonesia's Spice Heritage": "Indonesia's Spice Heritage",
             'Family Recipe Legacy': 'Family Recipe Legacy',
             'View All Stories': 'View All Stories',
-            'A group of highly skilled professionals building a future of shared success.': 'A group of highly skilled professionals building a future of shared success.',
+            'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.',
             'Contact Us': 'Contact Us',
             'Social Media': 'Social Media',
             'All Rights Reserved.': 'All Rights Reserved.'
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Morning at Monyenyo Kitchen': 'Pagi di Dapur Monyenyo',            "Indonesia's Spice Heritage": "Warisan Rempah Indonesia",
             'Family Recipe Legacy': 'Warisan Resep Keluarga',
             'View All Stories': 'Lihat Semua Cerita',
-            'A group of highly skilled professionals building a future of shared success.': 'Tim profesional membangun masa depan bersama.',
+            'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Masakan tradisional Indonesia dengan cita rasa otentik dan teknik kuliner modern.',
             'Contact Us': 'Hubungi Kami',
             'Social Media': 'Media Sosial',
             'All Rights Reserved.': 'Hak Cipta Dilindungi.'
