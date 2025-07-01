@@ -97,6 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'Message sent': 'Message sent',
             'Follow Us': 'Follow Us',
             'Social Media': 'Social Media',
+            'LOKASI TOKO KAMI': 'OUR STORE LOCATION',
+            'BROWNIES PASTRY TERBAIK DI INDONESIA': 'INDONESIA\'S BEST<br>BROWNIES PASTRY',
+            'Lembut. Renyah. Tak Tertahankan.': 'Soft. Crispy. Irresistible.',
+            'Temukan Lokasi Kami': 'Find Our Location',
+            'Hubungi Kami': 'Contact Us',
             'All Rights Reserved.': 'All Rights Reserved.'
         },
         id: {
@@ -194,6 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'Message sent': 'Pesan terkirim',
             'Follow Us': 'Ikuti Kami',
             'Social Media': 'Media Sosial',
+            'LOKASI TOKO KAMI': 'LOKASI TOKO KAMI',
+            'BROWNIES PASTRY TERBAIK DI INDONESIA': 'BROWNIES PASTRY<br>TERBAIK DI INDONESIA',
+            'Lembut. Renyah. Tak Tertahankan.': 'Lembut. Renyah. Tak Tertahankan.',
+            'Temukan Lokasi Kami': 'Temukan Lokasi Kami',
+            'Hubungi Kami': 'Hubungi Kami',
             'All Rights Reserved.': 'Hak Cipta Dilindungi.'
         }
     };
