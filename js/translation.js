@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.querySelectorAll('.footer-bottom p').forEach(function(el) {
             if (el.hasAttribute('data-no-translate')) return;
-            const key = el.textContent.trim().replace('© 2024 Kelvianov. ', '');
-            if (translations[lang][key]) el.innerHTML = '© 2024 Kelvianov. ' + translations[lang][key];
+            const key = el.textContent.trim().replace('© 2024 Monyenyo. ', '');
+            if (translations[lang][key]) el.innerHTML = '© 2024 Monyenyo. ' + translations[lang][key];
         });
     }
 
