@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'OUR STORIES': 'OUR STORIES',
             'LATEST FROM BLOG': 'LATEST FROM BLOG',
             'Discover the passion, tradition, and innovation behind every Monyenyo creation': 'Discover the passion, tradition, and innovation behind every Monyenyo creation',
+            'FEATURED': 'FEATURED',
             'Heritage': 'Heritage',
             'The Art of Traditional Indonesian Brownies': 'The Art of Traditional Indonesian Brownies',
             'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies',
@@ -96,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'OUR STORIES': 'CERITA KAMI',
             'LATEST FROM BLOG': 'TERBARU DARI BLOG',
             'Discover the passion, tradition, and innovation behind every Monyenyo creation': 'Temukan semangat, tradisi, dan inovasi di balik setiap kreasi Monyenyo',
+            'FEATURED': 'UNGGULAN',
             'Heritage': 'Warisan',
             'The Art of Traditional Indonesian Brownies': 'Seni Brownies Tradisional Indonesia',
             'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies': 'Jelajahi tradisi memanggang turun-temurun saat kami mengungkap rahasia di balik brownies andalan kami',
@@ -130,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (el.hasAttribute('data-no-translate')) return;
             const key = el.getAttribute('data-translate');
             if (translations[lang][key]) {
-                if (el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'A' || el.tagName === 'H3') {
+                if (el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'A' || el.tagName === 'H3' || el.tagName === 'DIV') {
                     el.innerHTML = translations[lang][key];
                 }
             }
@@ -198,10 +200,24 @@ document.addEventListener('DOMContentLoaded', function() {
             'h3.menu-section-name:contains("Premium Cake")': 'Premium Cake',
             'p.menu-section-desc:contains("Luxurious layered cake")': 'Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.',
             'span.menu-section-category:contains("Cake")': 'Cake',
-            'a.menu-section-btn': 'View Full Menu'
+            'a.menu-section-btn': 'View Full Menu',
+            'div.featured-blog-badge': 'FEATURED'
         };
         Object.keys(staticMap).forEach(function(selector) {
-            if (selector.includes(':contains')) {
+            // Tambahan: Batasi .hero-title hanya di index.html
+            if (selector === 'h1.hero-title') {
+                // Cek jika di index.html (bisa pakai id unik di body misal <body id="home">)
+                if (document.body && document.body.id === 'home') {
+                    document.querySelectorAll(selector).forEach(function(el) {
+                        el.setAttribute('data-translate', staticMap[selector]);
+                    });
+                }
+            } else if (selector === 'div.featured-blog-badge') {
+                // featured-blog-badge hanya ada di index.html, jadi aman untuk ditambahkan
+                document.querySelectorAll(selector).forEach(function(el) {
+                    el.setAttribute('data-translate', staticMap[selector]);
+                });
+            } else if (selector.includes(':contains')) {
                 // Custom contains selector
                 const [base, text] = selector.split(':contains');
                 document.querySelectorAll(base).forEach(function(el) {
