@@ -86,6 +86,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'Enter your email address': 'Enter your email address',
             'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.',
             'Contact Us': 'Contact Us',
+            'We\'d love to hear from you. Reach out for any questions, feedback, or collaboration opportunities.': 'We\'d love to hear from you. Reach out for any questions, feedback, or collaboration opportunities.',
+            'Name': 'Name',
+            'Your Name': 'Your Name',
+            'Email': 'Email',
+            'you@email.com': 'you@email.com',
+            'Message': 'Message',
+            'Type your message...': 'Type your message...',
+            'Send Message': 'Send Message',
+            'Message sent': 'Message sent',
+            'Follow Us': 'Follow Us',
             'Social Media': 'Social Media',
             'All Rights Reserved.': 'All Rights Reserved.'
         },
@@ -173,6 +183,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'Enter your email address': 'Masukkan alamat email Anda',
             'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Masakan tradisional Indonesia dengan cita rasa otentik dan teknik kuliner modern.',
             'Contact Us': 'Hubungi Kami',
+            'We\'d love to hear from you. Reach out for any questions, feedback, or collaboration opportunities.': 'Kami ingin mendengar dari Anda. Hubungi kami untuk pertanyaan, umpan balik, atau peluang kolaborasi.',
+            'Name': 'Nama',
+            'Your Name': 'Nama Anda',
+            'Email': 'Email',
+            'you@email.com': 'anda@email.com',
+            'Message': 'Pesan',
+            'Type your message...': 'Ketik pesan Anda...',
+            'Send Message': 'Kirim Pesan',
+            'Message sent': 'Pesan terkirim',
+            'Follow Us': 'Ikuti Kami',
             'Social Media': 'Media Sosial',
             'All Rights Reserved.': 'Hak Cipta Dilindungi.'
         }
@@ -209,6 +229,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.setAttribute('placeholder', translations[lang][key]);
             }
         });
+        // Translate data-translate-placeholder
+        document.querySelectorAll('[data-translate-placeholder]').forEach(function(el) {
+            if (el.hasAttribute('data-no-translate')) return;
+            const key = el.getAttribute('data-translate-placeholder');
+            if (translations[lang][key]) {
+                el.setAttribute('placeholder', translations[lang][key]);
+            }
+        });
+        // Translate labels, buttons, etc
+        document.querySelectorAll('label[data-translate], button[data-translate]').forEach(function(el) {
+            if (el.hasAttribute('data-no-translate')) return;
+            const key = el.getAttribute('data-translate');
+            if (translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
         // Translate footer
         document.querySelectorAll('.footer h4').forEach(function(el) {
             if (el.hasAttribute('data-no-translate')) return;
@@ -222,8 +258,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.querySelectorAll('.footer-bottom p').forEach(function(el) {
             if (el.hasAttribute('data-no-translate')) return;
-            const key = el.textContent.trim().replace('© 2024 Monyenyo. ', '');
-            if (translations[lang][key]) el.innerHTML = '© 2024 Monyenyo. ' + translations[lang][key];
+            if (el.hasAttribute('data-translate')) {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.innerHTML = '© 2024 Monyenyo. ' + translations[lang][key];
+                }
+            } else {
+                const key = el.textContent.trim().replace('© 2024 Monyenyo. ', '');
+                if (translations[lang][key]) el.innerHTML = '© 2024 Monyenyo. ' + translations[lang][key];
+            }
         });
     }
 
