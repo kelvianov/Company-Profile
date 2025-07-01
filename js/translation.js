@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'p.hero-subtitle': 'Soft. Crispy. Irresistible.',
             'h1.hero-title': "INDONESIA'S BEST\nBROWNIES PASTRY",
             'span.company-label': 'OUR COMPANY',
+            'h1.hero-main-title': 'TRADITIONAL\nINDONESIAN FOODS\nAND HERITAGE',
             'h2.hero-main-title': 'TRADITIONAL\nINDONESIAN FOODS\nAND HERITAGE',
             'h3:contains("The Heart of Every Kitchen")': 'The Heart of Every Kitchen',
             'p:contains("Restaurants are much more than just places where food is sold")': 'Restaurants are much more than just places where food is sold—they are hubs of tradition, culture, and creativity.',
@@ -212,6 +213,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         el.setAttribute('data-translate', staticMap[selector]);
                     });
                 }
+            } else if (selector === 'h1.hero-main-title') {
+                // h1.hero-main-title ada di halaman about.html, jadi aman untuk ditambahkan
+                document.querySelectorAll(selector).forEach(function(el) {
+                    el.setAttribute('data-translate', staticMap[selector]);
+                });
             } else if (selector === 'div.featured-blog-badge') {
                 // featured-blog-badge hanya ada di index.html, jadi aman untuk ditambahkan
                 document.querySelectorAll(selector).forEach(function(el) {
