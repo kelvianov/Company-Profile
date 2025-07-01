@@ -40,18 +40,50 @@ document.addEventListener('DOMContentLoaded', function() {
             'Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.': 'Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.',
             'Cake': 'Cake',            'View Full Menu': 'View Full Menu',
             'OUR STORIES': 'OUR STORIES',
+            'STORIES & INSIGHTS': 'STORIES & INSIGHTS',
             'LATEST FROM BLOG': 'LATEST FROM BLOG',
             'Discover the passion, tradition, and innovation behind every Monyenyo creation': 'Discover the passion, tradition, and innovation behind every Monyenyo creation',
+            'Discover the passion, tradition, and innovation behind every Monyenyo creation through our collection of stories, recipes, and behind-the-scenes moments.': 'Discover the passion, tradition, and innovation behind every Monyenyo creation through our collection of stories, recipes, and behind-the-scenes moments.',
             'FEATURED': 'FEATURED',
             'Heritage': 'Heritage',
             'The Art of Traditional Indonesian Brownies': 'The Art of Traditional Indonesian Brownies',
             'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies',
+            'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.',
             'Recipes': 'Recipes',
             'Secrets to Perfect Brownies': 'Secrets to Perfect Brownies',
             'Behind Scenes': 'Behind Scenes',
             'Morning at Monyenyo Kitchen': 'Morning at Monyenyo Kitchen',            "Indonesia's Spice Heritage": "Indonesia's Spice Heritage",
             'Family Recipe Legacy': 'Family Recipe Legacy',
             'View All Stories': 'View All Stories',
+            'Read Full Story': 'Read Full Story',
+            'EXPLORE BY CATEGORY': 'EXPLORE BY CATEGORY',
+            'Find stories that interest you most': 'Find stories that interest you most',
+            'All Stories': 'All Stories',
+            'Tips & Tricks': 'Tips & Tricks',
+            'Head Pastry Chef': 'Head Pastry Chef',
+            'by Chef Budi': 'by Chef Budi',
+            'by Chef Sari': 'by Chef Sari',
+            'by Team Monyenyo': 'by Team Monyenyo',
+            'by Chef Maria': 'by Chef Maria',
+            'by Chef Andi': 'by Chef Andi',
+            'by Founder': 'by Founder',
+            'Home Baking Made Simple': 'Home Baking Made Simple',
+            'A Day in Monyenyo Kitchen': 'A Day in Monyenyo Kitchen',
+            'Indonesian Spices in Modern Baking': 'Indonesian Spices in Modern Baking',
+            'Traditional Pastry Recipes': 'Traditional Pastry Recipes',
+            'Preserving Culinary Heritage': 'Preserving Culinary Heritage',
+            'Master the art of creating the perfect brownie texture with our time-tested techniques and premium ingredient secrets.': 'Master the art of creating the perfect brownie texture with our time-tested techniques and premium ingredient secrets.',
+            'Explore how traditional Indonesian spices like pandan, cinnamon, and nutmeg transform modern pastry creations.': 'Explore how traditional Indonesian spices like pandan, cinnamon, and nutmeg transform modern pastry creations.',
+            'Follow our bakers through their daily routine of creating fresh, delicious pastries from dawn to dusk.': 'Follow our bakers through their daily routine of creating fresh, delicious pastries from dawn to dusk.',
+            'Professional tips and tricks to elevate your home baking game and achieve bakery-quality results.': 'Professional tips and tricks to elevate your home baking game and achieve bakery-quality results.',
+            'Recreate classic Indonesian pastries at home with our authentic family recipes passed down through generations.': 'Recreate classic Indonesian pastries at home with our authentic family recipes passed down through generations.',
+            'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.': 'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.',
+            'Load More Stories': 'Load More Stories',
+            'Stay in the Loop': 'Stay in the Loop',
+            'Get our latest stories, recipes, and exclusive offers delivered straight to your inbox.': 'Get our latest stories, recipes, and exclusive offers delivered straight to your inbox.',
+            'Subscribe': 'Subscribe',
+            'We respect your privacy. Unsubscribe at any time.': 'We respect your privacy. Unsubscribe at any time.',
+            'Enter your email address': 'Enter your email address',
             'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.',
             'Contact Us': 'Contact Us',
             'Social Media': 'Social Media',
@@ -95,18 +127,50 @@ document.addEventListener('DOMContentLoaded', function() {
             'Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.': 'Kue lapis mewah dengan bahan premium dan tampilan modern. Perpaduan tradisi dan gaya kontemporer.',
             'Cake': 'Kue',            'View Full Menu': 'Lihat Menu Lengkap',
             'OUR STORIES': 'CERITA KAMI',
+            'STORIES & INSIGHTS': 'CERITA & WAWASAN',
             'LATEST FROM BLOG': 'TERBARU DARI BLOG',
             'Discover the passion, tradition, and innovation behind every Monyenyo creation': 'Temukan semangat, tradisi, dan inovasi di balik setiap kreasi Monyenyo',
+            'Discover the passion, tradition, and innovation behind every Monyenyo creation through our collection of stories, recipes, and behind-the-scenes moments.': 'Temukan semangat, tradisi, dan inovasi di balik setiap kreasi Monyenyo melalui koleksi cerita, resep, dan momen di balik layar kami.',
             'FEATURED': 'UNGGULAN',
             'Heritage': 'Warisan',
             'The Art of Traditional Indonesian Brownies': 'Seni Brownies Tradisional Indonesia',
             'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies': 'Jelajahi tradisi memanggang turun-temurun saat kami mengungkap rahasia di balik brownies andalan kami',
+            'Journey through generations of baking traditions as we unveil the secrets behind our signature brownies. From ancient spice blending techniques to modern presentation methods, discover how we honor Indonesia\'s rich culinary heritage.': 'Jelajahi tradisi memanggang turun-temurun saat kami mengungkap rahasia di balik brownies andalan kami. Dari teknik mencampur rempah kuno hingga metode presentasi modern, temukan bagaimana kami menghormati warisan kuliner Indonesia yang kaya.',
             'Recipes': 'Resep',
             'Secrets to Perfect Brownies': 'Rahasia Brownies Sempurna',
             'Behind Scenes': 'Di Balik Layar',
             'Morning at Monyenyo Kitchen': 'Pagi di Dapur Monyenyo',            "Indonesia's Spice Heritage": "Warisan Rempah Indonesia",
             'Family Recipe Legacy': 'Warisan Resep Keluarga',
             'View All Stories': 'Lihat Semua Cerita',
+            'Read Full Story': 'Baca Cerita Lengkap',
+            'EXPLORE BY CATEGORY': 'JELAJAHI BERDASARKAN KATEGORI',
+            'Find stories that interest you most': 'Temukan cerita yang paling menarik bagi Anda',
+            'All Stories': 'Semua Cerita',
+            'Tips & Tricks': 'Tips & Trik',
+            'Head Pastry Chef': 'Kepala Koki Pastry',
+            'by Chef Budi': 'oleh Chef Budi',
+            'by Chef Sari': 'oleh Chef Sari',
+            'by Team Monyenyo': 'oleh Tim Monyenyo',
+            'by Chef Maria': 'oleh Chef Maria',
+            'by Chef Andi': 'oleh Chef Andi',
+            'by Founder': 'oleh Pendiri',
+            'Home Baking Made Simple': 'Memanggang di Rumah Jadi Mudah',
+            'A Day in Monyenyo Kitchen': 'Sehari di Dapur Monyenyo',
+            'Indonesian Spices in Modern Baking': 'Rempah Indonesia dalam Kue Modern',
+            'Traditional Pastry Recipes': 'Resep Pastry Tradisional',
+            'Preserving Culinary Heritage': 'Melestarikan Warisan Kuliner',
+            'Master the art of creating the perfect brownie texture with our time-tested techniques and premium ingredient secrets.': 'Kuasai seni menciptakan tekstur brownies sempurna dengan teknik teruji dan rahasia bahan premium kami.',
+            'Explore how traditional Indonesian spices like pandan, cinnamon, and nutmeg transform modern pastry creations.': 'Jelajahi bagaimana rempah tradisional Indonesia seperti pandan, kayu manis, dan pala mengubah kreasi pastry modern.',
+            'Follow our bakers through their daily routine of creating fresh, delicious pastries from dawn to dusk.': 'Ikuti rutinitas harian para baker kami dalam menciptakan pastry segar dan lezat dari fajar hingga senja.',
+            'Professional tips and tricks to elevate your home baking game and achieve bakery-quality results.': 'Tips dan trik profesional untuk meningkatkan kemampuan memanggang di rumah dan mencapai hasil berkualitas toko roti.',
+            'Recreate classic Indonesian pastries at home with our authentic family recipes passed down through generations.': 'Buat ulang pastry klasik Indonesia di rumah dengan resep keluarga otentik yang diturunkan lintas generasi.',
+            'Our mission to preserve and celebrate Indonesia\'s rich baking traditions while embracing modern innovation.': 'Misi kami melestarikan dan merayakan tradisi memanggang Indonesia yang kaya sambil merangkul inovasi modern.',
+            'Load More Stories': 'Muat Lebih Banyak Cerita',
+            'Stay in the Loop': 'Tetap Terhubung',
+            'Get our latest stories, recipes, and exclusive offers delivered straight to your inbox.': 'Dapatkan cerita terbaru, resep, dan penawaran eksklusif langsung ke email Anda.',
+            'Subscribe': 'Berlangganan',
+            'We respect your privacy. Unsubscribe at any time.': 'Kami menghormati privasi Anda. Batal berlangganan kapan saja.',
+            'Enter your email address': 'Masukkan alamat email Anda',
             'Traditional Indonesian cuisine with authentic flavors and modern culinary techniques.': 'Masakan tradisional Indonesia dengan cita rasa otentik dan teknik kuliner modern.',
             'Contact Us': 'Hubungi Kami',
             'Social Media': 'Media Sosial',
@@ -135,6 +199,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'A' || el.tagName === 'H3' || el.tagName === 'DIV') {
                     el.innerHTML = translations[lang][key];
                 }
+            }
+        });
+        // Translate placeholders
+        document.querySelectorAll('input[placeholder]').forEach(function(input) {
+            if (input.hasAttribute('data-no-translate')) return;
+            const key = input.getAttribute('placeholder');
+            if (translations[lang][key]) {
+                input.setAttribute('placeholder', translations[lang][key]);
             }
         });
         // Translate footer
@@ -202,7 +274,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'p.menu-section-desc:contains("Luxurious layered cake")': 'Luxurious layered cake with premium ingredients and modern presentation. A perfect fusion of traditional taste and contemporary style.',
             'span.menu-section-category:contains("Cake")': 'Cake',
             'a.menu-section-btn': 'View Full Menu',
-            'div.featured-blog-badge': 'FEATURED'
+            'div.featured-blog-badge': 'FEATURED',
+            'div.featured-badge': 'FEATURED'
         };
         Object.keys(staticMap).forEach(function(selector) {
             // Tambahan: Batasi .hero-title hanya di index.html
@@ -214,12 +287,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             } else if (selector === 'h1.hero-main-title') {
-                // h1.hero-main-title ada di halaman about.html, jadi aman untuk ditambahkan
+                // h1.hero-main-title ada di halaman about.html dan blogs.html
+                // Hanya set data-translate jika belum ada, untuk menghindari menimpa yang sudah ada
                 document.querySelectorAll(selector).forEach(function(el) {
-                    el.setAttribute('data-translate', staticMap[selector]);
+                    if (!el.hasAttribute('data-translate')) {
+                        el.setAttribute('data-translate', staticMap[selector]);
+                    }
                 });
             } else if (selector === 'div.featured-blog-badge') {
                 // featured-blog-badge hanya ada di index.html, jadi aman untuk ditambahkan
+                document.querySelectorAll(selector).forEach(function(el) {
+                    el.setAttribute('data-translate', staticMap[selector]);
+                });
+            } else if (selector === 'div.featured-badge') {
+                // featured-badge ada di halaman blogs.html, jadi aman untuk ditambahkan
                 document.querySelectorAll(selector).forEach(function(el) {
                     el.setAttribute('data-translate', staticMap[selector]);
                 });
@@ -233,7 +314,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             } else {
                 document.querySelectorAll(selector).forEach(function(el) {
-                    el.setAttribute('data-translate', staticMap[selector]);
+                    // Hanya set data-translate jika belum ada
+                    if (!el.hasAttribute('data-translate')) {
+                        el.setAttribute('data-translate', staticMap[selector]);
+                    }
                 });
             }
         });
